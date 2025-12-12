@@ -1,0 +1,3048 @@
+{
+  "@status": "success",
+  "@code": "19",
+  "result": {
+    "@total-count": "1",
+    "@count": "1",
+    "@currentTime": "2025-10-29 22:01:01",
+    "configs": {
+      "@loc": "Mobile Users",
+      "@type": "cloud",
+      "entry": [
+        {
+          "@loc": "Mobile Users",
+          "@name": "Test-Proxy-Admins-ADEM",
+          "@type": "cloud",
+          "hip-collection": {
+            "collect-hip-data": "yes",
+            "max-wait-time": "30"
+          },
+          "save-user-credentials": "1",
+          "gateways": {
+            "external": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Prisma Access",
+                    "@type": "cloud",
+                    "fqdn": "gpcloudservice.com",
+                    "manual": "yes",
+                    "priority-rule": {
+                      "entry": [
+                        {
+                          "@loc": "Mobile Users",
+                          "@name": "Any",
+                          "@type": "cloud",
+                          "priority": "1"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "internal": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Internal-GW",
+                    "@type": "cloud",
+                    "fqdn": "globalprotect-gw-portal.cummins.com"
+                  }
+                ]
+              }
+            }
+          },
+          "authentication-override": {
+            "generate-cookie": "yes",
+            "cookie-encrypt-decrypt-cert": "Authentication Cookie Cert-",
+            "accept-cookie": {
+              "cookie-lifetime": {
+                "lifetime-in-hours": "24"
+              }
+            }
+          },
+          "internal-host-detection": {
+            "ip-address": "192.168.51.254",
+            "hostname": "ihd-prisma.cummins.com"
+          },
+          "gp-app-config": {
+            "config": {
+              "entry": [
+                {
+                  "@name": "agent-proxy-mode",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "2"
+                    ]
+                  }
+                },
+                {
+                  "@name": "auto-proxy-pac",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "https://store.swg.prismaaccess.com/pac/mqnznnzaz/bf361578-d8af-4ef8-8aed-9fdbc1c38296_e80d67b3-27e4-402a-b65a-9c0915c3f92a.pac"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-proxy-port",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "proxy-multiple-autodetect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-proxy",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-agent",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "install-with-admin-control"
+                    ]
+                  }
+                },
+                {
+                  "@name": "user-accept-terms-before-creating-tunnel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-signout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-extend-session",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-advanced-view",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-do-not-display-this-welcome-page-again",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "rediscover-network",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "resubmit-host-info",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "intelligent-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "can-continue-if-portal-cert-invalid",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-agent-action",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "install"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "refresh-config-interval",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "24"
+                    ]
+                  }
+                },
+                {
+                  "@name": "show-agent-icon",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "wsc-autodetect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "init-panel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "user-input-on-top",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "pre-logon-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "retry-tunnel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "retry-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "user-switch-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "60"
+                    ]
+                  }
+                },
+                {
+                  "@name": "preserve-tunnel-upon-user-logoff-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "10"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipsec-failover-ssl",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-tunnel-fallback-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ssl-only-selection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "split-tunnel-option",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "network-traffic"
+                    ]
+                  }
+                },
+                {
+                  "@name": "advanced-st-public-key",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvV6K3+jQAHKwA8IsftjV XbraIrn+Ff9u5SzmL2INnRZB24Ir84stgswzupdITPRFmuDkF/Jxikp7PnZ3ysKT veugWFj542h2gma+D0gb2J2CvHNKrBBeqDFsxNpSYbvAUtM1PI+TbChXtUI6UfTb zu/Own0Tu2EueoyLc69Wi1LmRBjL6Err7UR4MqC9UKTwbyZVUhbE61MViNzMaelj 486UO7nMq2+nUYUh56UhpFaLpqcMoJ1gTuMtaQIN+6vL4ID1iIcdTKlvTnOBTVid uXH+V28lQfY7BAGtadJmWrpMcK6geWW6LFM+XBQ09lTyf6uLizalmwY2HG7XMJOx XwIDAQAB -----END PUBLIC KEY-----"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipv6-preferred",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso-pin",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso-macos",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "logout-remove-sso",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "krb-auth-fail-fallback",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "certificate-store-lookup",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "machine"
+                    ]
+                  }
+                },
+                {
+                  "@name": "scep-certificate-renewal-period",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "7"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ext-key-usage-oid-for-client-cert",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1.3.6.1.5.5.7.3.1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "retain-connection-smartcard-removal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-enforcement",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforce-globalprotect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-exception-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-using-default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-blocking-notification-delay",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "15"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-traffic-blocking-notification-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-blocking-notification-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "<div style=\"font-family:'Helvetica Neue';\"><h1 style=\"color:red;text-align:center; margin: 0; font-size: 30px;\">Notice</h1><p style=\"margin: 0;font-size: 15px; line-height: 1.2em;\">To access the network, you must first connect to GlobalProtect.</p></div>"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-traffic-blocking-notification-dismissal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-captive-portal-detection-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-detection-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "<div style=\"font-family:'Helvetica Neue';\"><h1 style=\"color:red;text-align:center; margin: 0; font-size: 30px;\">Captive Portal Detected</h1><p style=\"margin: 0; font-size: 15px; line-height: 1.2em;\">GlobalProtect has temporarily permitted network access for you to connect to the Internet. Follow instructions from your internet provider.</p><p style=\"margin: 0; font-size: 15px; line-height: 1.2em;\">If you let the connection time out, open GlobalProtect and click Connect to try again.</p></div>"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-notification-delay",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "5"
+                    ]
+                  }
+                },
+                {
+                  "@name": "adv-internal-host-detection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "delays-internal-host-detection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-hip-remediation",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "hip-remediation-retry",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "tunnel-mtu",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "max-internal-gateway-connection-attempts",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "portal-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "5"
+                    ]
+                  }
+                },
+                {
+                  "@name": "connect-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "5"
+                    ]
+                  }
+                },
+                {
+                  "@name": "receive-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "30"
+                    ]
+                  }
+                },
+                {
+                  "@name": "split-tunnel-option-mobile",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforce-dns",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "append-local-search-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "flush-dns",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-enabled",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-listening-port",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "4501"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-notification-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "You have attempted to access a protected resource that requires additional authentication. Proceed to authenticate at"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-prompt-suppress-time",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "measuring-egw-tcp-connection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "log-gateway",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "diagnostic-servers",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "msftconnecttest.com",
+                      "google.com",
+                      "apple.com",
+                      "zoom.us"
+                    ]
+                  }
+                },
+                {
+                  "@name": "quarantine-add-message",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "Your security policy has restricted access to the network from this device. If the issue persists, contact your administrator."
+                    ]
+                  }
+                },
+                {
+                  "@name": "quarantine-remove-message",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "Your security policy has restored access to the network from this device. If you still cannot access the network, contact your administrator."
+                    ]
+                  }
+                },
+                {
+                  "@name": "can-change-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "uninstall",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "allowed"
+                    ]
+                  }
+                },
+                {
+                  "@name": "cdl-log",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "connect-method",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "pre-logon"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-user-override",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "client-upgrade",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "source-user": {
+            "member": [
+              "xm543@cummins.com",
+              "to267@cummins.com",
+              "to267a@cummins.com",
+              "as12h@cummins.com",
+              "ny634@cummins.com",
+              "nb387@cummins.com",
+              "ld176@cummins.com",
+              "ch309@cummins.com",
+              "ng531@cummins.com",
+              "dg015@cummins.com",
+              "vu009@cummins.com"
+            ]
+          },
+          "description": "VPN and Proxy Mode, always on. Allow portal and uninstall",
+          "client-certificate": {
+            "local": "GP_Log_Certificate"
+          }
+        },
+        {
+          "@loc": "Mobile Users",
+          "@name": "Proxy-Mac-Only",
+          "@type": "cloud",
+          "hip-collection": {
+            "collect-hip-data": "yes",
+            "max-wait-time": "30"
+          },
+          "save-user-credentials": "1",
+          "gateways": {
+            "external": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Prisma Access",
+                    "@type": "cloud",
+                    "fqdn": "gpcloudservice.com",
+                    "manual": "yes",
+                    "priority-rule": {
+                      "entry": [
+                        {
+                          "@loc": "Mobile Users",
+                          "@name": "Any",
+                          "@type": "cloud",
+                          "priority": "1"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "internal": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Internal-GW",
+                    "@type": "cloud",
+                    "fqdn": "globalprotect-gw-portal.cummins.com"
+                  }
+                ]
+              }
+            }
+          },
+          "authentication-override": {
+            "generate-cookie": "yes",
+            "cookie-encrypt-decrypt-cert": "Authentication Cookie Cert-",
+            "accept-cookie": {
+              "cookie-lifetime": {
+                "lifetime-in-hours": "24"
+              }
+            }
+          },
+          "internal-host-detection": {
+            "ip-address": "192.168.51.254",
+            "hostname": "ihd-prisma.cummins.com"
+          },
+          "gp-app-config": {
+            "config": {
+              "entry": [
+                {
+                  "@name": "agent-proxy-mode",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "2"
+                    ]
+                  }
+                },
+                {
+                  "@name": "auto-proxy-pac",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "https://store.swg.prismaaccess.com/pac/mqnznnzaz/bf361578-d8af-4ef8-8aed-9fdbc1c38296_e80d67b3-27e4-402a-b65a-9c0915c3f92a.pac"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-proxy",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "pre-logon-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "-1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "retry-tunnel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "user-switch-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "60"
+                    ]
+                  }
+                },
+                {
+                  "@name": "preserve-tunnel-upon-user-logoff-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "10"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipsec-failover-ssl",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-tunnel-fallback-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipv6-preferred",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-signout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-extend-session",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "wifi-to-wired-transition",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "intelligent-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "certificate-store-lookup",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "machine"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ext-key-usage-oid-for-client-cert",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1.3.6.1.5.5.7.3.1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-exception-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-using-default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "tunnel-mtu",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "append-local-search-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "measuring-egw-tcp-connection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "log-gateway",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "diagnostic-servers",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "google.com",
+                      "apple.com",
+                      "msftconnecttest.com",
+                      "zoom.us"
+                    ]
+                  }
+                },
+                {
+                  "@name": "uninstall",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "connect-method",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "pre-logon"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-user-override",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "client-upgrade",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "os": {
+            "member": [
+              "Mac"
+            ]
+          },
+          "source-user": {
+            "member": [
+              "any"
+            ]
+          },
+          "description": "VPN and Proxy Mode, always on. No Proxy. Windows Only ## Remove this once the Proxy-Win-Mac has no group",
+          "client-certificate": {
+            "local": "GP_Log_Certificate"
+          }
+        },
+        {
+          "@loc": "Mobile Users",
+          "@name": "Proxy-Win-Mac",
+          "@type": "cloud",
+          "hip-collection": {
+            "collect-hip-data": "yes",
+            "max-wait-time": "30"
+          },
+          "save-user-credentials": "1",
+          "gateways": {
+            "external": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Prisma Access",
+                    "@type": "cloud",
+                    "fqdn": "gpcloudservice.com",
+                    "manual": "yes",
+                    "priority-rule": {
+                      "entry": [
+                        {
+                          "@loc": "Mobile Users",
+                          "@name": "Any",
+                          "@type": "cloud",
+                          "priority": "1"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "internal": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Internal-GW",
+                    "@type": "cloud",
+                    "fqdn": "globalprotect-gw-portal.cummins.com"
+                  }
+                ]
+              }
+            }
+          },
+          "authentication-override": {
+            "generate-cookie": "yes",
+            "cookie-encrypt-decrypt-cert": "Authentication Cookie Cert-",
+            "accept-cookie": {
+              "cookie-lifetime": {
+                "lifetime-in-hours": "24"
+              }
+            }
+          },
+          "internal-host-detection": {
+            "ip-address": "192.168.51.254",
+            "hostname": "ihd-prisma.cummins.com"
+          },
+          "gp-app-config": {
+            "config": {
+              "entry": [
+                {
+                  "@name": "agent-proxy-mode",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "2"
+                    ]
+                  }
+                },
+                {
+                  "@name": "auto-proxy-pac",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "https://store.swg.prismaaccess.com/pac/mqnznnzaz/bf361578-d8af-4ef8-8aed-9fdbc1c38296_e80d67b3-27e4-402a-b65a-9c0915c3f92a.pac"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-proxy",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "pre-logon-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "retry-tunnel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "user-switch-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "60"
+                    ]
+                  }
+                },
+                {
+                  "@name": "preserve-tunnel-upon-user-logoff-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "10"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipsec-failover-ssl",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-tunnel-fallback-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipv6-preferred",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-signout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-extend-session",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "wifi-to-wired-transition",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "intelligent-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "certificate-store-lookup",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "machine"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ext-key-usage-oid-for-client-cert",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1.3.6.1.5.5.7.3.1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-exception-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-using-default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "tunnel-mtu",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "append-local-search-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "measuring-egw-tcp-connection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "log-gateway",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "diagnostic-servers",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "google.com",
+                      "apple.com",
+                      "msftconnecttest.com",
+                      "zoom.us"
+                    ]
+                  }
+                },
+                {
+                  "@name": "uninstall",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "connect-method",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "pre-logon"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-user-override",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "client-upgrade",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "os": {
+            "member": [
+              "Windows",
+              "Mac"
+            ]
+          },
+          "source-user": {
+            "member": [
+              "xm543@cummins.com",
+              "to267@cummins.com",
+              "ny634@cummins.com",
+              "ng531@cummins.com",
+              "hc738@cummins.com",
+              "bv692@cummins.com",
+              "ch309@cummins.com",
+              "iq567@cummins.com",
+              "qu380@cummins.com",
+              "gs803@cummins.com",
+              "ck724@cummins.com",
+              "bd860@cummins.com",
+              "dl519@cummins.com",
+              "nb128@cummins.com",
+              "hb666@cummins.com",
+              "cd761@cummins.com",
+              "qj529@cummins.com",
+              "xy619@cummins.com",
+              "pz205@cummins.com",
+              "vu009@cummins.com",
+              "vu368@cummins.com",
+              "xt308@cummins.com",
+              "to267a@cummins.com",
+              "lt500@cummins.com",
+              "pv313@cummins.com",
+              "wc249@cummins.com",
+              "tm640@cummins.com",
+              "lc364@cummins.com",
+              "aj69j@cummins.com",
+              "jd665@cummins.com",
+              "ld176@cummins.com",
+              "CN=g_az_PaloAlto_GlobalProtectDisconnect,DC=cummins365,DC=onmicrosoft,DC=com",
+              "xd308@cummins.com",
+              "wy176@cummins.com",
+              "ry138@cummins.com",
+              "im270@cummins.com",
+              "vq308@cummins.com",
+              "vq306@cummins.com",
+              "vt854@cummins.com",
+              "sg689@cummins.com",
+              "sn370@cummins.com",
+              "tf019@cummins.com",
+              "wk079@cummins.com",
+              "xw653@cummins.com",
+              "nr790@cummins.com",
+              "ae36j@cummins.com",
+              "ao03z@cummins.com",
+              "rn161@cummins.com",
+              "gs572@cummins.com"
+            ]
+          },
+          "description": "VPN and Proxy Mode, always on. No Proxy. Windows Only",
+          "client-certificate": {
+            "local": "GP_Log_Certificate"
+          }
+        },
+        {
+          "@loc": "Mobile Users",
+          "@name": "Pre-logon",
+          "@type": "cloud",
+          "hip-collection": {
+            "collect-hip-data": "yes",
+            "max-wait-time": "30"
+          },
+          "save-user-credentials": "1",
+          "gateways": {
+            "external": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Prisma Access",
+                    "@type": "cloud",
+                    "fqdn": "gpcloudservice.com",
+                    "manual": "yes",
+                    "priority-rule": {
+                      "entry": [
+                        {
+                          "@loc": "Mobile Users",
+                          "@name": "Any",
+                          "@type": "cloud",
+                          "priority": "1"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "internal": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Internal-GW",
+                    "@type": "cloud",
+                    "fqdn": "globalprotect-gw-portal.cummins.com"
+                  }
+                ]
+              }
+            }
+          },
+          "source-user": {
+            "member": [
+              "pre-logon"
+            ]
+          },
+          "authentication-override": {
+            "generate-cookie": "yes",
+            "cookie-encrypt-decrypt-cert": "Authentication Cookie Cert-",
+            "accept-cookie": {
+              "cookie-lifetime": {
+                "lifetime-in-hours": "24"
+              }
+            }
+          },
+          "gp-app-config": {
+            "config": {
+              "entry": [
+                {
+                  "@name": "agent-proxy-mode",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-proxy-port",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "proxy-multiple-autodetect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-proxy",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-agent",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "not-install"
+                    ]
+                  }
+                },
+                {
+                  "@name": "user-accept-terms-before-creating-tunnel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-signout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-extend-session",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-advanced-view",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-do-not-display-this-welcome-page-again",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "rediscover-network",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "resubmit-host-info",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "intelligent-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "can-continue-if-portal-cert-invalid",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-agent-action",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no-action"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "refresh-config-interval",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "show-agent-icon",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "wsc-autodetect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "init-panel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "user-input-on-top",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "pre-logon-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "retry-tunnel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "retry-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "user-switch-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "60"
+                    ]
+                  }
+                },
+                {
+                  "@name": "preserve-tunnel-upon-user-logoff-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "10"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipsec-failover-ssl",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-tunnel-fallback-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ssl-only-selection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "split-tunnel-option",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "network-traffic"
+                    ]
+                  }
+                },
+                {
+                  "@name": "advanced-st-public-key",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "ipv6-preferred",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso-pin",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso-macos",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "logout-remove-sso",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "krb-auth-fail-fallback",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "certificate-store-lookup",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "machine"
+                    ]
+                  }
+                },
+                {
+                  "@name": "scep-certificate-renewal-period",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "7"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ext-key-usage-oid-for-client-cert",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "retain-connection-smartcard-removal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-enforcement",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforce-globalprotect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforcer-exception-list",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "192.168.0.0 /16",
+                      "172.16.0.0/12",
+                      "10.0.0.0/8",
+                      "169.254.0.0/16",
+                      "143.222.0.0/16",
+                      "160.95.0.0/16",
+                      "146.91.0.0/16"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforcer-exception-list-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "detectportal.firefox.com",
+                      "httpstat.us",
+                      "*.gstatic.com ",
+                      "*.apple.com",
+                      "*.paloaltonetworks.com",
+                      "*.gpcloudservice.com",
+                      "*.msftncsi.com",
+                      "*.microsoftonline.cn",
+                      "*.microsoftonline.com",
+                      "*.cummins.com",
+                      "*.zoom.us",
+                      "outlook.cloud.microsoft ",
+                      "*.office.com",
+                      "*.office365.com",
+                      "*.outlook.com",
+                      "*.lync.com",
+                      "*.windows.net",
+                      "aka.ms",
+                      "*.users.storage.live.com",
+                      "*.windows.com\t",
+                      "*.secure.skypeassets.com",
+                      "*.azureedge.net",
+                      "*.skype.com",
+                      "*.microsoft.com",
+                      "clients3.google.com",
+                      "*.office.net",
+                      "*.live.com",
+                      "*.zoom.com",
+                      "msftconnecttest.com",
+                      "sts.windows.net",
+                      "*.msftauth.net",
+                      "*.msauth.net",
+                      "login.live.com",
+                      "*.cloudapp.net",
+                      "onedrive.com",
+                      "*.prismaaccess.com"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-exception-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-using-default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-blocking-notification-delay",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "display-traffic-blocking-notification-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-blocking-notification-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "<div style=\"font-family:'Helvetica Neue';\"><h1 style=\"color:red;text-align:center; margin: 0; font-size: 30px;\">Notice</h1><p style=\"margin: 0;font-size: 15px; line-height: 1.2em;\">To access the network, you must first connect to GlobalProtect.</p></div>"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-traffic-blocking-notification-dismissal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-captive-portal-detection-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-detection-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "<div style=\"font-family:'Helvetica Neue';\"><h1 style=\"color:red;text-align:center; margin: 0; font-size: 30px;\">Captive Portal Detected</h1><p style=\"margin: 0; font-size: 15px; line-height: 1.2em;\">GlobalProtect has temporarily permitted network access for you to connect to the Internet. Follow instructions from your local network internet provider.</p><p style=\"margin: 0; font-size: 15px; line-height: 1.2em;\">If you let the connection time out, open GlobalProtect and click Connect to try again.</p></div>"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-notification-delay",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "adv-internal-host-detection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-hip-remediation",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "hip-remediation-retry",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "tunnel-mtu",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "max-internal-gateway-connection-attempts",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "portal-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "connect-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "receive-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {}
+                },
+                {
+                  "@name": "enforce-dns",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "append-local-search-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "flush-dns",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-enabled",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-listening-port",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "4501"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-notification-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "You have attempted to access a protected resource that requires additional authentication. Proceed to authenticate at"
+                    ]
+                  }
+                },
+                {
+                  "@name": "mfa-prompt-suppress-time",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "0"
+                    ]
+                  }
+                },
+                {
+                  "@name": "measuring-egw-tcp-connection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "log-gateway",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "diagnostic-servers",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "msftconnecttest.com",
+                      "google.com",
+                      "apple.com",
+                      "zoom.us"
+                    ]
+                  }
+                },
+                {
+                  "@name": "quarantine-add-message",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "Your security policy has restricted access to the network from this device. If the issue persists, contact your administrator."
+                    ]
+                  }
+                },
+                {
+                  "@name": "quarantine-remove-message",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "Your security policy has restored access to the network from this device. If you still cannot access the network, contact your administrator."
+                    ]
+                  }
+                },
+                {
+                  "@name": "can-change-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "uninstall",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "cdl-log",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "connect-method",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "pre-logon"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-user-override",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "client-upgrade",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "internal-host-detection": {
+            "ip-address": "192.168.51.254",
+            "hostname": "ihd-prisma.cummins.com"
+          },
+          "agent-ui": {
+            "agent-user-override-timeout": "60",
+            "welcome-page": {}
+          },
+          "client-certificate": {
+            "local": "GP_Log_Certificate"
+          }
+        },
+        {
+          "@loc": "Mobile Users",
+          "@name": "Enforcer",
+          "@type": "cloud",
+          "hip-collection": {
+            "collect-hip-data": "yes",
+            "max-wait-time": "30"
+          },
+          "save-user-credentials": "1",
+          "gateways": {
+            "external": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Prisma Access",
+                    "@type": "cloud",
+                    "fqdn": "gpcloudservice.com",
+                    "manual": "yes",
+                    "priority-rule": {
+                      "entry": [
+                        {
+                          "@loc": "Mobile Users",
+                          "@name": "Any",
+                          "@type": "cloud",
+                          "priority": "1"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "internal": {
+              "list": {
+                "entry": [
+                  {
+                    "@loc": "Mobile Users",
+                    "@name": "Internal-GW",
+                    "@type": "cloud",
+                    "fqdn": "globalprotect-gw-portal.cummins.com"
+                  }
+                ]
+              }
+            }
+          },
+          "authentication-override": {
+            "generate-cookie": "yes",
+            "cookie-encrypt-decrypt-cert": "Authentication Cookie Cert-",
+            "accept-cookie": {
+              "cookie-lifetime": {
+                "lifetime-in-hours": "24"
+              }
+            }
+          },
+          "internal-host-detection": {
+            "ip-address": "192.168.51.254",
+            "hostname": "ihd-prisma.cummins.com"
+          },
+          "gp-app-config": {
+            "config": {
+              "entry": [
+                {
+                  "@name": "can-change-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "uninstall",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-agent",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "not-install"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enable-signout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "allow-extend-session",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "intelligent-portal",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "dem-agent-action",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no-action"
+                    ]
+                  }
+                },
+                {
+                  "@name": "pre-logon-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "user-switch-tunnel-rename-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "60"
+                    ]
+                  }
+                },
+                {
+                  "@name": "preserve-tunnel-upon-user-logoff-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "10"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipsec-failover-ssl",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-tunnel-fallback-notification",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ipv6-preferred",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "init-panel",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "user-input-on-top",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-sso-macos",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "logout-remove-sso",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "krb-auth-fail-fallback",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "certificate-store-lookup",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "machine"
+                    ]
+                  }
+                },
+                {
+                  "@name": "scep-certificate-renewal-period",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "7"
+                    ]
+                  }
+                },
+                {
+                  "@name": "ext-key-usage-oid-for-client-cert",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1.3.6.1.5.5.7.3.1"
+                    ]
+                  }
+                },
+                {
+                  "@name": "traffic-enforcement",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "tcp-udp-with-tunnel-address-type"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforce-globalprotect",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforcer-exception-list",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "192.168.0.0 /16",
+                      "172.16.0.0/12",
+                      "10.0.0.0/8",
+                      "169.254.0.0/16",
+                      "143.222.0.0/16",
+                      "160.95.0.0/16",
+                      "146.91.0.0/16"
+                    ]
+                  }
+                },
+                {
+                  "@name": "enforcer-exception-list-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "detectportal.firefox.com",
+                      "httpstat.us",
+                      "*.gstatic.com ",
+                      "*.apple.com",
+                      "*.paloaltonetworks.com",
+                      "*.gpcloudservice.com",
+                      "*.msftncsi.com",
+                      "*.microsoftonline.cn",
+                      "*.microsoftonline.com",
+                      "*.cummins.com",
+                      "*.zoom.us",
+                      "outlook.cloud.microsoft ",
+                      "*.office.com",
+                      "*.office365.com",
+                      "*.outlook.com",
+                      "*.lync.com",
+                      "*.windows.net",
+                      "aka.ms",
+                      "*.users.storage.live.com",
+                      "*.windows.com",
+                      "*.secure.skypeassets.com",
+                      "*.azureedge.net",
+                      "*.skype.com",
+                      "*.microsoft.com",
+                      "clients3.google.com",
+                      "*.office.net",
+                      "*.live.com",
+                      "*.zoom.com",
+                      "msftconnecttest.com",
+                      "sts.windows.net",
+                      "*.msftauth.net",
+                      "*.msauth.net",
+                      "login.live.com",
+                      "*.cloudapp.net",
+                      "onedrive.com",
+                      "*.prismaaccess.com",
+                      "*.jamfcloud.com",
+                      "*.jamf.one",
+                      "*.prismaaccess.cn"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-exception-timeout",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "captive-portal-using-default-browser",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "display-captive-portal-detection-msg",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "tunnel-mtu",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "1300"
+                    ]
+                  }
+                },
+                {
+                  "@name": "append-local-search-domain",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "use-proxy",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "measuring-egw-tcp-connection",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "log-gateway",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "yes"
+                    ]
+                  }
+                },
+                {
+                  "@name": "diagnostic-servers",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "msftconnecttest.com",
+                      "google.com",
+                      "apple.com",
+                      "zoom.us"
+                    ]
+                  }
+                },
+                {
+                  "@name": "cdl-log",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "no"
+                    ]
+                  }
+                },
+                {
+                  "@name": "connect-method",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "pre-logon"
+                    ]
+                  }
+                },
+                {
+                  "@name": "agent-user-override",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                },
+                {
+                  "@name": "client-upgrade",
+                  "@loc": "Mobile Users",
+                  "@type": "cloud",
+                  "value": {
+                    "member": [
+                      "disabled"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "agent-ui": {
+            "agent-user-override-timeout": "60",
+            "passcode": "-AQ==fCIvspJ9goryL1khNOiTJIBjfA0=uCe7euQd2XxJQsWsl1Qazw==",
+            "welcome-page": {}
+          },
+          "description": "post logon with enforcer on",
+          "source-user": {
+            "member": [
+              "any"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

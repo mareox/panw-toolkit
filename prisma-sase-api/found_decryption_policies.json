@@ -1,0 +1,4437 @@
+[
+  {
+    "id": "0f6fad73-d0ca-49d4-bc00-b24e7e1f6846",
+    "name": "web-security-default",
+    "folder": "All",
+    "snippet": "Web-Security-Default",
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "max_version": "max",
+      "keyxchg_algo_rsa": true,
+      "keyxchg_algo_dhe": true,
+      "keyxchg_algo_ecdhe": true,
+      "auth_algo_sha256": true,
+      "auth_algo_sha384": true,
+      "enc_algo_aes_128_cbc": true,
+      "enc_algo_aes_256_cbc": true,
+      "enc_algo_aes_128_gcm": true,
+      "enc_algo_aes_256_gcm": true,
+      "enc_algo_chacha20_poly1305": true,
+      "auth_algo_sha1": false
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true,
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true,
+      "block_unknown_cert": true,
+      "restrict_cert_exts": true,
+      "strip_alpn": true,
+      "block_client_cert": true,
+      "auto_include_altname": true
+    },
+    "ssl_no_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true
+    },
+    "ssl_inbound_proxy": {
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true
+    }
+  },
+  {
+    "id": "59f005f7-d284-4a98-bcb4-16a671a2f57e",
+    "name": "best-practice",
+    "folder": "All",
+    "snippet": "predefined-snippet",
+    "ssl_no_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true,
+      "block_unknown_cert": true,
+      "restrict_cert_exts": true,
+      "auto_include_altname": true,
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true,
+      "block_client_cert": true
+    },
+    "ssl_inbound_proxy": {
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true
+    },
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "enc_algo_3des": false,
+      "enc_algo_rc4": false,
+      "auth_algo_sha1": false
+    }
+  },
+  {
+    "id": "a8d13ed9-dbf8-4dee-9dd6-93950906d042",
+    "name": "Decryption-With-Cert-Check",
+    "folder": "Mobile Users Container",
+    "ssl_no_proxy": {
+      "block_expired_certificate": false,
+      "block_untrusted_issuer": false
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true,
+      "block_unknown_cert": true,
+      "restrict_cert_exts": true,
+      "auto_include_altname": true,
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true,
+      "block_client_cert": false,
+      "strip_alpn": false
+    },
+    "ssl_inbound_proxy": {
+      "block_unsupported_version": false,
+      "block_unsupported_cipher": false
+    },
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "enc_algo_3des": true,
+      "enc_algo_rc4": true,
+      "auth_algo_sha1": true,
+      "max_version": "tls1-2",
+      "enc_algo_chacha20_poly1305": false
+    }
+  },
+  {
+    "id": "36d8ec01-e29b-4bbf-af35-10b2c26cbc24",
+    "name": "No-Decryption-With-Inspection",
+    "folder": "Mobile Users Container",
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "max_version": "tls1-2",
+      "enc_algo_chacha20_poly1305": false
+    },
+    "ssl_no_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": false
+    }
+  },
+  {
+    "id": "d662c537-d9ca-4f22-913b-33896ca95cd3",
+    "name": "Decryption-No-Cert-Check",
+    "folder": "Mobile Users Container",
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "max_version": "tls1-2",
+      "enc_algo_chacha20_poly1305": false
+    },
+    "ssl_no_proxy": {
+      "block_expired_certificate": false,
+      "block_untrusted_issuer": false
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": false,
+      "block_untrusted_issuer": false,
+      "block_unsupported_version": false,
+      "block_unsupported_cipher": false,
+      "block_unknown_cert": false,
+      "restrict_cert_exts": false,
+      "auto_include_altname": false
+    }
+  },
+  {
+    "id": "aa8935d4-aab7-457e-937d-75509a7c7ada",
+    "name": "EDL-Hosting-Service-Profile",
+    "folder": "All",
+    "snippet": "default",
+    "ca_certificates": [
+      {
+        "name": "GlobalSign-Root-CA"
+      }
+    ]
+  },
+  {
+    "id": "f9f43fa7-9db2-4f23-ad2a-70aea2725af2",
+    "name": "Cummins-Machine-Cert-CA",
+    "folder": "Mobile Users Container",
+    "ca_certificates": [
+      {
+        "name": "Cummins-Machine-Cert-CA-v3"
+      },
+      {
+        "name": "Cummins-Machine-Cert-CA-v4"
+      }
+    ]
+  },
+  {
+    "id": "08bc97e7-6d4b-4955-99fc-4360f35de5a8",
+    "name": "Deny-Public-DNS",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Deny access to public DNS",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "any"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "dns",
+      "dns-base",
+      "dns-non-rfc",
+      "dns-over-https",
+      "dns-over-tls",
+      "dnscrypt",
+      "cisco-umbrella-dnscrypt",
+      "tcp-over-dns",
+      "ms-win-dns"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "drop",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake"
+  },
+  {
+    "id": "8b2cf035-7655-461b-b8ac-63a5c500eff2",
+    "name": "Pre-Logon Tanium",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "allow pre-logon traffic to tanium servers",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "known-user"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "trust"
+    ],
+    "destination": [
+      "10.208.240.122",
+      "10.208.240.121",
+      "10.137.120.13",
+      "10.137.120.15",
+      "10.137.120.17",
+      "10.137.120.18",
+      "10.137.120.20",
+      "10.137.120.24",
+      "10.137.120.25",
+      "10.137.120.26",
+      "10.137.132.28",
+      "10.137.132.30",
+      "10.137.132.35",
+      "10.137.132.36",
+      "10.137.132.37",
+      "10.137.132.40",
+      "10.137.132.41",
+      "10.53.162.67",
+      "10.53.162.91",
+      "160.95.137.31",
+      "192.168.4.27",
+      "10.128.71.32",
+      "10.133.226.11",
+      "10.133.54.32",
+      "10.208.14.118",
+      "10.208.14.119",
+      "10.208.142.96",
+      "10.208.190.114",
+      "10.53.161.16",
+      "10.53.162.118",
+      "10.53.162.217",
+      "143.222.192.147",
+      "143.222.20.126",
+      "143.222.200.14",
+      "143.222.200.18",
+      "143.222.24.57",
+      "143.222.94.16",
+      "143.222.96.202",
+      "146.91.203.143",
+      "146.91.49.14",
+      "146.91.49.15",
+      "34.235.83.201"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "tanium",
+      "ssl"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "Internal"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "negate_destination": false,
+    "log_setting": "Cortex Data Lake"
+  },
+  {
+    "id": "2184f628-03bc-49c0-ab4f-650208a2d52c",
+    "name": "CumminsGlobalWeb-AWS-Workspace",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "AWS-Workspace-US"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "pcoip",
+      "ssl",
+      "ping",
+      "traceroute",
+      "amazon-workspace"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "allow access to aws workspace destinations"
+  },
+  {
+    "id": "86d19bc0-87e1-4236-be8e-fa46f1c00238",
+    "name": "CumminsGlobalWebPolicy-Specific-URL-RITM2743549",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "RITM2743549",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "ty938@cummins.com",
+      "uu404@cummins.com",
+      "us522@cummins.com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "web-browsing",
+      "ssl"
+    ],
+    "service": [
+      "application-default"
+    ],
+    "category": [
+      "Specific-GlobalDest-RITM2743549"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "9d98ef0f-ad3c-4a55-a680-0b9a40e8acbc",
+    "name": "User access to Brazil gov sites",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "web-browsing"
+    ],
+    "service": [
+      "tcp-444",
+      "tcp-1433",
+      "tcp-443",
+      "tcp-9442"
+    ],
+    "category": [
+      "brazil gov sites"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "User access to Brazil gov sites"
+  },
+  {
+    "id": "1e650b13-5f4f-413d-a42d-efc1574870b2",
+    "name": "Bloomberg",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "New Rule to allow port 8292",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "69.191.192.0/18",
+      "69.187.16.0/20",
+      "69.187.32.0/19",
+      "69.187.72.0/21",
+      "69.191.176.0/20",
+      "103.251.205.0/24",
+      "160.43.250.0/24",
+      "160.43.251.0/24",
+      "160.43.252.0/24",
+      "160.43.253.0/24",
+      "205.216.112.0/24",
+      "206.156.53.0/24",
+      "208.22.56.0/24",
+      "208.22.57.0/24"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "socks"
+    ],
+    "service": [
+      "tcp-8292"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "fce7f864-cf17-4b48-b1ca-64f171f713f7",
+    "name": "GP users to EXT DLP access",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "GP users to EXT DLP access over port 10443 and SSL application",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "any"
+    ],
+    "service": [
+      "tcp-10443"
+    ],
+    "category": [
+      "DLP-EXT"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "0d41dffe-26bf-44db-a1e5-0f10c542cf57",
+    "name": "SCTASK1053402",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Migrated from Default FW",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "205.220.169.178/32",
+      "205.220.181.177/32"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "web-browsing"
+    ],
+    "service": [
+      "tcp-10020"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "baa5e275-5a57-4683-acae-4bbeaaece3f0",
+    "name": "INSITE-Guidanz-Caladmin",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Migrated from Default FW",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-8443"
+    ],
+    "category": [
+      "INSITE-Guidanz"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "5ada5b1a-44db-433e-9fd3-85067d12902a",
+    "name": "decipher12.innovation-asset.com",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-4443"
+    ],
+    "category": [
+      "decipher12.innovation"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "b017e184-855a-412d-8405-4e640a1e93c3",
+    "name": "GP User access to Mongo DB",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "mongodb-cluster"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-27017"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "allow access to Mongo DB"
+  },
+  {
+    "id": "5894390d-ef2c-4eb6-93f8-3153d7726f11",
+    "name": "internet-access-default",
+    "folder": "All",
+    "policy_type": "Internet",
+    "position": "post",
+    "description": "Default Action for all outbound traffic to any Web Application and URL Category",
+    "tag": [
+      "Web Security Global"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "any"
+    ],
+    "devices": [
+      "any"
+    ],
+    "allow_web_application": [
+      {
+        "name": "web-browsing",
+        "position": "post"
+      },
+      {
+        "name": "ssl",
+        "position": "post"
+      },
+      {
+        "name": "All Web Applications",
+        "position": "post"
+      }
+    ],
+    "allow_url_category": [
+      {
+        "name": "high-risk",
+        "position": "post"
+      },
+      {
+        "name": "abused-drugs",
+        "position": "post"
+      },
+      {
+        "name": "adult",
+        "position": "post"
+      },
+      {
+        "name": "command-and-control",
+        "position": "post"
+      },
+      {
+        "name": "copyright-infringement",
+        "position": "post"
+      },
+      {
+        "name": "dynamic-dns",
+        "position": "post"
+      },
+      {
+        "name": "extremism",
+        "position": "post"
+      },
+      {
+        "name": "gambling",
+        "position": "post"
+      },
+      {
+        "name": "grayware",
+        "position": "post"
+      },
+      {
+        "name": "hacking",
+        "position": "post"
+      },
+      {
+        "name": "insufficient-content",
+        "position": "post"
+      },
+      {
+        "name": "malware",
+        "position": "post"
+      },
+      {
+        "name": "newly-registered-domain",
+        "position": "post"
+      },
+      {
+        "name": "parked",
+        "position": "post"
+      },
+      {
+        "name": "peer-to-peer",
+        "position": "post"
+      },
+      {
+        "name": "phishing",
+        "position": "post"
+      },
+      {
+        "name": "proxy-avoidance-and-anonymizers",
+        "position": "post"
+      },
+      {
+        "name": "questionable",
+        "position": "post"
+      },
+      {
+        "name": "unknown",
+        "position": "post"
+      },
+      {
+        "name": "weapons",
+        "position": "post"
+      },
+      {
+        "name": "alcohol-and-tobacco",
+        "position": "post"
+      },
+      {
+        "name": "auctions",
+        "position": "post"
+      },
+      {
+        "name": "business-and-economy",
+        "position": "post"
+      },
+      {
+        "name": "computer-and-internet-info",
+        "position": "post"
+      },
+      {
+        "name": "content-delivery-networks",
+        "position": "post"
+      },
+      {
+        "name": "cryptocurrency",
+        "position": "post"
+      },
+      {
+        "name": "dating",
+        "position": "post"
+      },
+      {
+        "name": "educational-institutions",
+        "position": "post"
+      },
+      {
+        "name": "entertainment-and-arts",
+        "position": "post"
+      },
+      {
+        "name": "financial-services",
+        "position": "post"
+      },
+      {
+        "name": "games",
+        "position": "post"
+      },
+      {
+        "name": "government",
+        "position": "post"
+      },
+      {
+        "name": "health-and-medicine",
+        "position": "post"
+      },
+      {
+        "name": "home-and-garden",
+        "position": "post"
+      },
+      {
+        "name": "hunting-and-fishing",
+        "position": "post"
+      },
+      {
+        "name": "internet-portals",
+        "position": "post"
+      },
+      {
+        "name": "job-search",
+        "position": "post"
+      },
+      {
+        "name": "legal",
+        "position": "post"
+      },
+      {
+        "name": "low-risk",
+        "position": "post"
+      },
+      {
+        "name": "medium-risk",
+        "position": "post"
+      },
+      {
+        "name": "military",
+        "position": "post"
+      },
+      {
+        "name": "motor-vehicles",
+        "position": "post"
+      },
+      {
+        "name": "music",
+        "position": "post"
+      },
+      {
+        "name": "news",
+        "position": "post"
+      },
+      {
+        "name": "nudity",
+        "position": "post"
+      },
+      {
+        "name": "not-resolved",
+        "position": "post"
+      },
+      {
+        "name": "online-storage-and-backup",
+        "position": "post"
+      },
+      {
+        "name": "web-hosting",
+        "position": "post"
+      },
+      {
+        "name": "web-based-email",
+        "position": "post"
+      },
+      {
+        "name": "web-advertisements",
+        "position": "post"
+      },
+      {
+        "name": "travel",
+        "position": "post"
+      },
+      {
+        "name": "translation",
+        "position": "post"
+      },
+      {
+        "name": "training-and-tools",
+        "position": "post"
+      },
+      {
+        "name": "swimsuits-and-intimate-apparel",
+        "position": "post"
+      },
+      {
+        "name": "streaming-media",
+        "position": "post"
+      },
+      {
+        "name": "stock-advice-and-tools",
+        "position": "post"
+      },
+      {
+        "name": "sports",
+        "position": "post"
+      },
+      {
+        "name": "society",
+        "position": "post"
+      },
+      {
+        "name": "social-networking",
+        "position": "post"
+      },
+      {
+        "name": "shopping",
+        "position": "post"
+      },
+      {
+        "name": "shareware-and-freeware",
+        "position": "post"
+      },
+      {
+        "name": "sex-education",
+        "position": "post"
+      },
+      {
+        "name": "search-engines",
+        "position": "post"
+      },
+      {
+        "name": "religion",
+        "position": "post"
+      },
+      {
+        "name": "reference-and-research",
+        "position": "post"
+      },
+      {
+        "name": "recreation-and-hobbies",
+        "position": "post"
+      },
+      {
+        "name": "real-time-detection",
+        "position": "post"
+      },
+      {
+        "name": "real-estate",
+        "position": "post"
+      },
+      {
+        "name": "private-ip-addresses",
+        "position": "post"
+      },
+      {
+        "name": "philosophy-and-political-advocacy",
+        "position": "post"
+      },
+      {
+        "name": "personal-sites-and-blogs",
+        "position": "post"
+      }
+    ],
+    "action": "allow",
+    "security_settings": {
+      "anti_spyware": "yes",
+      "virus_and_wildfire_analysis": "yes",
+      "vulnerability": "yes"
+    },
+    "log_settings": {
+      "log_sessions": true
+    },
+    "disabled": true
+  },
+  {
+    "id": "08bc97e7-6d4b-4955-99fc-4360f35de5a8",
+    "name": "Deny-Public-DNS",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Deny access to public DNS",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "any"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "dns",
+      "dns-base",
+      "dns-non-rfc",
+      "dns-over-https",
+      "dns-over-tls",
+      "dnscrypt",
+      "cisco-umbrella-dnscrypt",
+      "tcp-over-dns",
+      "ms-win-dns"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "drop",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake"
+  },
+  {
+    "id": "8b2cf035-7655-461b-b8ac-63a5c500eff2",
+    "name": "Pre-Logon Tanium",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "allow pre-logon traffic to tanium servers",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "known-user"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "trust"
+    ],
+    "destination": [
+      "10.208.240.122",
+      "10.208.240.121",
+      "10.137.120.13",
+      "10.137.120.15",
+      "10.137.120.17",
+      "10.137.120.18",
+      "10.137.120.20",
+      "10.137.120.24",
+      "10.137.120.25",
+      "10.137.120.26",
+      "10.137.132.28",
+      "10.137.132.30",
+      "10.137.132.35",
+      "10.137.132.36",
+      "10.137.132.37",
+      "10.137.132.40",
+      "10.137.132.41",
+      "10.53.162.67",
+      "10.53.162.91",
+      "160.95.137.31",
+      "192.168.4.27",
+      "10.128.71.32",
+      "10.133.226.11",
+      "10.133.54.32",
+      "10.208.14.118",
+      "10.208.14.119",
+      "10.208.142.96",
+      "10.208.190.114",
+      "10.53.161.16",
+      "10.53.162.118",
+      "10.53.162.217",
+      "143.222.192.147",
+      "143.222.20.126",
+      "143.222.200.14",
+      "143.222.200.18",
+      "143.222.24.57",
+      "143.222.94.16",
+      "143.222.96.202",
+      "146.91.203.143",
+      "146.91.49.14",
+      "146.91.49.15",
+      "34.235.83.201"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "tanium",
+      "ssl"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "Internal"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "negate_destination": false,
+    "log_setting": "Cortex Data Lake"
+  },
+  {
+    "id": "2184f628-03bc-49c0-ab4f-650208a2d52c",
+    "name": "CumminsGlobalWeb-AWS-Workspace",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "AWS-Workspace-US"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "pcoip",
+      "ssl",
+      "ping",
+      "traceroute",
+      "amazon-workspace"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "allow access to aws workspace destinations"
+  },
+  {
+    "id": "86d19bc0-87e1-4236-be8e-fa46f1c00238",
+    "name": "CumminsGlobalWebPolicy-Specific-URL-RITM2743549",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "RITM2743549",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "ty938@cummins.com",
+      "uu404@cummins.com",
+      "us522@cummins.com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "web-browsing",
+      "ssl"
+    ],
+    "service": [
+      "application-default"
+    ],
+    "category": [
+      "Specific-GlobalDest-RITM2743549"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "9d98ef0f-ad3c-4a55-a680-0b9a40e8acbc",
+    "name": "User access to Brazil gov sites",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "web-browsing"
+    ],
+    "service": [
+      "tcp-444",
+      "tcp-1433",
+      "tcp-443",
+      "tcp-9442"
+    ],
+    "category": [
+      "brazil gov sites"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "User access to Brazil gov sites"
+  },
+  {
+    "id": "1e650b13-5f4f-413d-a42d-efc1574870b2",
+    "name": "Bloomberg",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "New Rule to allow port 8292",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "69.191.192.0/18",
+      "69.187.16.0/20",
+      "69.187.32.0/19",
+      "69.187.72.0/21",
+      "69.191.176.0/20",
+      "103.251.205.0/24",
+      "160.43.250.0/24",
+      "160.43.251.0/24",
+      "160.43.252.0/24",
+      "160.43.253.0/24",
+      "205.216.112.0/24",
+      "206.156.53.0/24",
+      "208.22.56.0/24",
+      "208.22.57.0/24"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "socks"
+    ],
+    "service": [
+      "tcp-8292"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "fce7f864-cf17-4b48-b1ca-64f171f713f7",
+    "name": "GP users to EXT DLP access",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "GP users to EXT DLP access over port 10443 and SSL application",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "any"
+    ],
+    "service": [
+      "tcp-10443"
+    ],
+    "category": [
+      "DLP-EXT"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "0d41dffe-26bf-44db-a1e5-0f10c542cf57",
+    "name": "SCTASK1053402",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Migrated from Default FW",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "205.220.169.178/32",
+      "205.220.181.177/32"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "web-browsing"
+    ],
+    "service": [
+      "tcp-10020"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "baa5e275-5a57-4683-acae-4bbeaaece3f0",
+    "name": "INSITE-Guidanz-Caladmin",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Migrated from Default FW",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-8443"
+    ],
+    "category": [
+      "INSITE-Guidanz"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "5ada5b1a-44db-433e-9fd3-85067d12902a",
+    "name": "decipher12.innovation-asset.com",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-4443"
+    ],
+    "category": [
+      "decipher12.innovation"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "b017e184-855a-412d-8405-4e640a1e93c3",
+    "name": "GP User access to Mongo DB",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "mongodb-cluster"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-27017"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "allow access to Mongo DB"
+  },
+  {
+    "id": "5894390d-ef2c-4eb6-93f8-3153d7726f11",
+    "name": "internet-access-default",
+    "folder": "All",
+    "policy_type": "Internet",
+    "position": "post",
+    "description": "Default Action for all outbound traffic to any Web Application and URL Category",
+    "tag": [
+      "Web Security Global"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "any"
+    ],
+    "devices": [
+      "any"
+    ],
+    "allow_web_application": [
+      {
+        "name": "web-browsing",
+        "position": "post"
+      },
+      {
+        "name": "ssl",
+        "position": "post"
+      },
+      {
+        "name": "All Web Applications",
+        "position": "post"
+      }
+    ],
+    "allow_url_category": [
+      {
+        "name": "high-risk",
+        "position": "post"
+      },
+      {
+        "name": "abused-drugs",
+        "position": "post"
+      },
+      {
+        "name": "adult",
+        "position": "post"
+      },
+      {
+        "name": "command-and-control",
+        "position": "post"
+      },
+      {
+        "name": "copyright-infringement",
+        "position": "post"
+      },
+      {
+        "name": "dynamic-dns",
+        "position": "post"
+      },
+      {
+        "name": "extremism",
+        "position": "post"
+      },
+      {
+        "name": "gambling",
+        "position": "post"
+      },
+      {
+        "name": "grayware",
+        "position": "post"
+      },
+      {
+        "name": "hacking",
+        "position": "post"
+      },
+      {
+        "name": "insufficient-content",
+        "position": "post"
+      },
+      {
+        "name": "malware",
+        "position": "post"
+      },
+      {
+        "name": "newly-registered-domain",
+        "position": "post"
+      },
+      {
+        "name": "parked",
+        "position": "post"
+      },
+      {
+        "name": "peer-to-peer",
+        "position": "post"
+      },
+      {
+        "name": "phishing",
+        "position": "post"
+      },
+      {
+        "name": "proxy-avoidance-and-anonymizers",
+        "position": "post"
+      },
+      {
+        "name": "questionable",
+        "position": "post"
+      },
+      {
+        "name": "unknown",
+        "position": "post"
+      },
+      {
+        "name": "weapons",
+        "position": "post"
+      },
+      {
+        "name": "alcohol-and-tobacco",
+        "position": "post"
+      },
+      {
+        "name": "auctions",
+        "position": "post"
+      },
+      {
+        "name": "business-and-economy",
+        "position": "post"
+      },
+      {
+        "name": "computer-and-internet-info",
+        "position": "post"
+      },
+      {
+        "name": "content-delivery-networks",
+        "position": "post"
+      },
+      {
+        "name": "cryptocurrency",
+        "position": "post"
+      },
+      {
+        "name": "dating",
+        "position": "post"
+      },
+      {
+        "name": "educational-institutions",
+        "position": "post"
+      },
+      {
+        "name": "entertainment-and-arts",
+        "position": "post"
+      },
+      {
+        "name": "financial-services",
+        "position": "post"
+      },
+      {
+        "name": "games",
+        "position": "post"
+      },
+      {
+        "name": "government",
+        "position": "post"
+      },
+      {
+        "name": "health-and-medicine",
+        "position": "post"
+      },
+      {
+        "name": "home-and-garden",
+        "position": "post"
+      },
+      {
+        "name": "hunting-and-fishing",
+        "position": "post"
+      },
+      {
+        "name": "internet-portals",
+        "position": "post"
+      },
+      {
+        "name": "job-search",
+        "position": "post"
+      },
+      {
+        "name": "legal",
+        "position": "post"
+      },
+      {
+        "name": "low-risk",
+        "position": "post"
+      },
+      {
+        "name": "medium-risk",
+        "position": "post"
+      },
+      {
+        "name": "military",
+        "position": "post"
+      },
+      {
+        "name": "motor-vehicles",
+        "position": "post"
+      },
+      {
+        "name": "music",
+        "position": "post"
+      },
+      {
+        "name": "news",
+        "position": "post"
+      },
+      {
+        "name": "nudity",
+        "position": "post"
+      },
+      {
+        "name": "not-resolved",
+        "position": "post"
+      },
+      {
+        "name": "online-storage-and-backup",
+        "position": "post"
+      },
+      {
+        "name": "web-hosting",
+        "position": "post"
+      },
+      {
+        "name": "web-based-email",
+        "position": "post"
+      },
+      {
+        "name": "web-advertisements",
+        "position": "post"
+      },
+      {
+        "name": "travel",
+        "position": "post"
+      },
+      {
+        "name": "translation",
+        "position": "post"
+      },
+      {
+        "name": "training-and-tools",
+        "position": "post"
+      },
+      {
+        "name": "swimsuits-and-intimate-apparel",
+        "position": "post"
+      },
+      {
+        "name": "streaming-media",
+        "position": "post"
+      },
+      {
+        "name": "stock-advice-and-tools",
+        "position": "post"
+      },
+      {
+        "name": "sports",
+        "position": "post"
+      },
+      {
+        "name": "society",
+        "position": "post"
+      },
+      {
+        "name": "social-networking",
+        "position": "post"
+      },
+      {
+        "name": "shopping",
+        "position": "post"
+      },
+      {
+        "name": "shareware-and-freeware",
+        "position": "post"
+      },
+      {
+        "name": "sex-education",
+        "position": "post"
+      },
+      {
+        "name": "search-engines",
+        "position": "post"
+      },
+      {
+        "name": "religion",
+        "position": "post"
+      },
+      {
+        "name": "reference-and-research",
+        "position": "post"
+      },
+      {
+        "name": "recreation-and-hobbies",
+        "position": "post"
+      },
+      {
+        "name": "real-time-detection",
+        "position": "post"
+      },
+      {
+        "name": "real-estate",
+        "position": "post"
+      },
+      {
+        "name": "private-ip-addresses",
+        "position": "post"
+      },
+      {
+        "name": "philosophy-and-political-advocacy",
+        "position": "post"
+      },
+      {
+        "name": "personal-sites-and-blogs",
+        "position": "post"
+      }
+    ],
+    "action": "allow",
+    "security_settings": {
+      "anti_spyware": "yes",
+      "virus_and_wildfire_analysis": "yes",
+      "vulnerability": "yes"
+    },
+    "log_settings": {
+      "log_sessions": true
+    },
+    "disabled": true
+  },
+  {
+    "id": "08bc97e7-6d4b-4955-99fc-4360f35de5a8",
+    "name": "Deny-Public-DNS",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Deny access to public DNS",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "any"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "dns",
+      "dns-base",
+      "dns-non-rfc",
+      "dns-over-https",
+      "dns-over-tls",
+      "dnscrypt",
+      "cisco-umbrella-dnscrypt",
+      "tcp-over-dns",
+      "ms-win-dns"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "drop",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake"
+  },
+  {
+    "id": "8b2cf035-7655-461b-b8ac-63a5c500eff2",
+    "name": "Pre-Logon Tanium",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "allow pre-logon traffic to tanium servers",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "known-user"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "trust"
+    ],
+    "destination": [
+      "10.208.240.122",
+      "10.208.240.121",
+      "10.137.120.13",
+      "10.137.120.15",
+      "10.137.120.17",
+      "10.137.120.18",
+      "10.137.120.20",
+      "10.137.120.24",
+      "10.137.120.25",
+      "10.137.120.26",
+      "10.137.132.28",
+      "10.137.132.30",
+      "10.137.132.35",
+      "10.137.132.36",
+      "10.137.132.37",
+      "10.137.132.40",
+      "10.137.132.41",
+      "10.53.162.67",
+      "10.53.162.91",
+      "160.95.137.31",
+      "192.168.4.27",
+      "10.128.71.32",
+      "10.133.226.11",
+      "10.133.54.32",
+      "10.208.14.118",
+      "10.208.14.119",
+      "10.208.142.96",
+      "10.208.190.114",
+      "10.53.161.16",
+      "10.53.162.118",
+      "10.53.162.217",
+      "143.222.192.147",
+      "143.222.20.126",
+      "143.222.200.14",
+      "143.222.200.18",
+      "143.222.24.57",
+      "143.222.94.16",
+      "143.222.96.202",
+      "146.91.203.143",
+      "146.91.49.14",
+      "146.91.49.15",
+      "34.235.83.201"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "tanium",
+      "ssl"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "Internal"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "negate_destination": false,
+    "log_setting": "Cortex Data Lake"
+  },
+  {
+    "id": "2184f628-03bc-49c0-ab4f-650208a2d52c",
+    "name": "CumminsGlobalWeb-AWS-Workspace",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "AWS-Workspace-US"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "pcoip",
+      "ssl",
+      "ping",
+      "traceroute",
+      "amazon-workspace"
+    ],
+    "service": [
+      "any"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "allow access to aws workspace destinations"
+  },
+  {
+    "id": "86d19bc0-87e1-4236-be8e-fa46f1c00238",
+    "name": "CumminsGlobalWebPolicy-Specific-URL-RITM2743549",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "RITM2743549",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "ty938@cummins.com",
+      "uu404@cummins.com",
+      "us522@cummins.com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "web-browsing",
+      "ssl"
+    ],
+    "service": [
+      "application-default"
+    ],
+    "category": [
+      "Specific-GlobalDest-RITM2743549"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "9d98ef0f-ad3c-4a55-a680-0b9a40e8acbc",
+    "name": "User access to Brazil gov sites",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "web-browsing"
+    ],
+    "service": [
+      "tcp-444",
+      "tcp-1433",
+      "tcp-443",
+      "tcp-9442"
+    ],
+    "category": [
+      "brazil gov sites"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "User access to Brazil gov sites"
+  },
+  {
+    "id": "1e650b13-5f4f-413d-a42d-efc1574870b2",
+    "name": "Bloomberg",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "New Rule to allow port 8292",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "69.191.192.0/18",
+      "69.187.16.0/20",
+      "69.187.32.0/19",
+      "69.187.72.0/21",
+      "69.191.176.0/20",
+      "103.251.205.0/24",
+      "160.43.250.0/24",
+      "160.43.251.0/24",
+      "160.43.252.0/24",
+      "160.43.253.0/24",
+      "205.216.112.0/24",
+      "206.156.53.0/24",
+      "208.22.56.0/24",
+      "208.22.57.0/24"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "socks"
+    ],
+    "service": [
+      "tcp-8292"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "fce7f864-cf17-4b48-b1ca-64f171f713f7",
+    "name": "GP users to EXT DLP access",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "GP users to EXT DLP access over port 10443 and SSL application",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "any"
+    ],
+    "service": [
+      "tcp-10443"
+    ],
+    "category": [
+      "DLP-EXT"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "0d41dffe-26bf-44db-a1e5-0f10c542cf57",
+    "name": "SCTASK1053402",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Migrated from Default FW",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "205.220.169.178/32",
+      "205.220.181.177/32"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl",
+      "web-browsing"
+    ],
+    "service": [
+      "tcp-10020"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "baa5e275-5a57-4683-acae-4bbeaaece3f0",
+    "name": "INSITE-Guidanz-Caladmin",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "description": "Migrated from Default FW",
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-8443"
+    ],
+    "category": [
+      "INSITE-Guidanz"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "5ada5b1a-44db-433e-9fd3-85067d12902a",
+    "name": "decipher12.innovation-asset.com",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_AU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Africa,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_BW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_CentralAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Country,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_DK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_EMEA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ES,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Europe,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_FR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_GR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HU,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_HardCopyOutputServices,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Helpdesk,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IN,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IQ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_IT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_JP,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KE,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_KZ,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_LB,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ML,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MX,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Malta,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_MiddleEast,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAARLI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAATLA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NABOST,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAINDI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAIRVI,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NAPORT,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NASANL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Network,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_NorthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAntivirus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsAppPackaging,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsNotes,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsRDS,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_OpsWindows,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PH,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PL,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_PR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_QSK95,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_RO,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SG,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Security,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Services,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_SouthAmerica,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_TR,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_Telecom,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UK,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_UY,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZA,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZM,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins_ZW,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Manufacturing,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "any"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-4443"
+    ],
+    "category": [
+      "decipher12.innovation"
+    ],
+    "action": "allow",
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalWebPolicy"
+      ]
+    },
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false
+  },
+  {
+    "id": "b017e184-855a-412d-8405-4e640a1e93c3",
+    "name": "GP User access to Mongo DB",
+    "folder": "Mobile Users Container",
+    "policy_type": "Security",
+    "position": "pre",
+    "disabled": false,
+    "from": [
+      "trust"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "CN=g_EmpType_Distributor,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_1,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Employee_2,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Ex-employee,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_JointVenture,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Other,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Supplier,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_ClientAdmins,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_Atmus,DC=cummins365,DC=onmicrosoft,DC=com",
+      "CN=g_EmpType_CWK,DC=cummins365,DC=onmicrosoft,DC=com"
+    ],
+    "source_hip": [
+      "any"
+    ],
+    "to": [
+      "untrust"
+    ],
+    "destination": [
+      "mongodb-cluster"
+    ],
+    "destination_hip": [
+      "any"
+    ],
+    "application": [
+      "ssl"
+    ],
+    "service": [
+      "tcp-27017"
+    ],
+    "category": [
+      "any"
+    ],
+    "action": "allow",
+    "log_start": false,
+    "log_end": true,
+    "log_setting": "Cortex Data Lake",
+    "negate_destination": false,
+    "profile_setting": {
+      "group": [
+        "CumminsGlobalPolicy-NoURL"
+      ]
+    },
+    "description": "allow access to Mongo DB"
+  },
+  {
+    "id": "5894390d-ef2c-4eb6-93f8-3153d7726f11",
+    "name": "internet-access-default",
+    "folder": "All",
+    "policy_type": "Internet",
+    "position": "post",
+    "description": "Default Action for all outbound traffic to any Web Application and URL Category",
+    "tag": [
+      "Web Security Global"
+    ],
+    "source": [
+      "any"
+    ],
+    "source_user": [
+      "any"
+    ],
+    "devices": [
+      "any"
+    ],
+    "allow_web_application": [
+      {
+        "name": "web-browsing",
+        "position": "post"
+      },
+      {
+        "name": "ssl",
+        "position": "post"
+      },
+      {
+        "name": "All Web Applications",
+        "position": "post"
+      }
+    ],
+    "allow_url_category": [
+      {
+        "name": "high-risk",
+        "position": "post"
+      },
+      {
+        "name": "abused-drugs",
+        "position": "post"
+      },
+      {
+        "name": "adult",
+        "position": "post"
+      },
+      {
+        "name": "command-and-control",
+        "position": "post"
+      },
+      {
+        "name": "copyright-infringement",
+        "position": "post"
+      },
+      {
+        "name": "dynamic-dns",
+        "position": "post"
+      },
+      {
+        "name": "extremism",
+        "position": "post"
+      },
+      {
+        "name": "gambling",
+        "position": "post"
+      },
+      {
+        "name": "grayware",
+        "position": "post"
+      },
+      {
+        "name": "hacking",
+        "position": "post"
+      },
+      {
+        "name": "insufficient-content",
+        "position": "post"
+      },
+      {
+        "name": "malware",
+        "position": "post"
+      },
+      {
+        "name": "newly-registered-domain",
+        "position": "post"
+      },
+      {
+        "name": "parked",
+        "position": "post"
+      },
+      {
+        "name": "peer-to-peer",
+        "position": "post"
+      },
+      {
+        "name": "phishing",
+        "position": "post"
+      },
+      {
+        "name": "proxy-avoidance-and-anonymizers",
+        "position": "post"
+      },
+      {
+        "name": "questionable",
+        "position": "post"
+      },
+      {
+        "name": "unknown",
+        "position": "post"
+      },
+      {
+        "name": "weapons",
+        "position": "post"
+      },
+      {
+        "name": "alcohol-and-tobacco",
+        "position": "post"
+      },
+      {
+        "name": "auctions",
+        "position": "post"
+      },
+      {
+        "name": "business-and-economy",
+        "position": "post"
+      },
+      {
+        "name": "computer-and-internet-info",
+        "position": "post"
+      },
+      {
+        "name": "content-delivery-networks",
+        "position": "post"
+      },
+      {
+        "name": "cryptocurrency",
+        "position": "post"
+      },
+      {
+        "name": "dating",
+        "position": "post"
+      },
+      {
+        "name": "educational-institutions",
+        "position": "post"
+      },
+      {
+        "name": "entertainment-and-arts",
+        "position": "post"
+      },
+      {
+        "name": "financial-services",
+        "position": "post"
+      },
+      {
+        "name": "games",
+        "position": "post"
+      },
+      {
+        "name": "government",
+        "position": "post"
+      },
+      {
+        "name": "health-and-medicine",
+        "position": "post"
+      },
+      {
+        "name": "home-and-garden",
+        "position": "post"
+      },
+      {
+        "name": "hunting-and-fishing",
+        "position": "post"
+      },
+      {
+        "name": "internet-portals",
+        "position": "post"
+      },
+      {
+        "name": "job-search",
+        "position": "post"
+      },
+      {
+        "name": "legal",
+        "position": "post"
+      },
+      {
+        "name": "low-risk",
+        "position": "post"
+      },
+      {
+        "name": "medium-risk",
+        "position": "post"
+      },
+      {
+        "name": "military",
+        "position": "post"
+      },
+      {
+        "name": "motor-vehicles",
+        "position": "post"
+      },
+      {
+        "name": "music",
+        "position": "post"
+      },
+      {
+        "name": "news",
+        "position": "post"
+      },
+      {
+        "name": "nudity",
+        "position": "post"
+      },
+      {
+        "name": "not-resolved",
+        "position": "post"
+      },
+      {
+        "name": "online-storage-and-backup",
+        "position": "post"
+      },
+      {
+        "name": "web-hosting",
+        "position": "post"
+      },
+      {
+        "name": "web-based-email",
+        "position": "post"
+      },
+      {
+        "name": "web-advertisements",
+        "position": "post"
+      },
+      {
+        "name": "travel",
+        "position": "post"
+      },
+      {
+        "name": "translation",
+        "position": "post"
+      },
+      {
+        "name": "training-and-tools",
+        "position": "post"
+      },
+      {
+        "name": "swimsuits-and-intimate-apparel",
+        "position": "post"
+      },
+      {
+        "name": "streaming-media",
+        "position": "post"
+      },
+      {
+        "name": "stock-advice-and-tools",
+        "position": "post"
+      },
+      {
+        "name": "sports",
+        "position": "post"
+      },
+      {
+        "name": "society",
+        "position": "post"
+      },
+      {
+        "name": "social-networking",
+        "position": "post"
+      },
+      {
+        "name": "shopping",
+        "position": "post"
+      },
+      {
+        "name": "shareware-and-freeware",
+        "position": "post"
+      },
+      {
+        "name": "sex-education",
+        "position": "post"
+      },
+      {
+        "name": "search-engines",
+        "position": "post"
+      },
+      {
+        "name": "religion",
+        "position": "post"
+      },
+      {
+        "name": "reference-and-research",
+        "position": "post"
+      },
+      {
+        "name": "recreation-and-hobbies",
+        "position": "post"
+      },
+      {
+        "name": "real-time-detection",
+        "position": "post"
+      },
+      {
+        "name": "real-estate",
+        "position": "post"
+      },
+      {
+        "name": "private-ip-addresses",
+        "position": "post"
+      },
+      {
+        "name": "philosophy-and-political-advocacy",
+        "position": "post"
+      },
+      {
+        "name": "personal-sites-and-blogs",
+        "position": "post"
+      }
+    ],
+    "action": "allow",
+    "security_settings": {
+      "anti_spyware": "yes",
+      "virus_and_wildfire_analysis": "yes",
+      "vulnerability": "yes"
+    },
+    "log_settings": {
+      "log_sessions": true
+    },
+    "disabled": true
+  }
+]

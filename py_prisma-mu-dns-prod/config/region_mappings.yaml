@@ -1,0 +1,95 @@
+# Region Name Mappings
+# Map technical region names to friendly display names shown in Prisma Access console
+
+region_names:
+  # Standard aggregated regions
+  worldwide: "Worldwide"
+  emea: "Africa, Europe & Middle East"
+  apac: "Asia, Australia & Japan"
+
+  # Americas - United States
+  ip-pool-group-1: "US-Eastern"
+  ip-pool-group-31: "US-Central"
+  ip-pool-group-23: "US-Western"
+  ip-pool-group-32: "US East South"
+
+  # Americas - Canada
+  ip-pool-group-2: "Canada"
+
+  # Americas - Latin America
+  ip-pool-group-13: "LATAM-Brazil"
+  ip-pool-group-24: "LATAM-Chile"
+  ip-pool-group-30: "LATAM-Peru"
+
+  # Asia Pacific - East Asia
+  ip-pool-group-16: "Hong Kong"
+  ip-pool-group-17: "Taiwan"
+  ip-pool-group-21: "Japan"
+
+  # Asia Pacific - South & Southeast Asia
+  ip-pool-group-15: "Southeast Asia"
+  ip-pool-group-19: "India"
+
+  # Asia Pacific - Australia & Oceania
+  ip-pool-group-14: "Australia"
+  ip-pool-group-26: "Australia-West"
+
+# Detailed region mappings for reference:
+#
+# Americas:
+# ip-pool-group-1 (US-Eastern): Panama, US East, US Southeast, Costa Rica, Ecuador, Guatemala,
+#                               US Northeast, Mexico Central, Colombia
+#                               DNS: 10.213.13.13, 10.208.140.13
+#
+# ip-pool-group-31 (US-Central): US South, US Central, US-Central (Chicago), US Midwest
+#                                DNS: 10.208.140.13, 10.213.13.14
+#
+# ip-pool-group-23 (US-Western): Mexico Northeast, US Northwest, US West, Canada West,
+#                                Mexico West, US Southwest
+#                                DNS: Prisma Access Default DNS
+#
+# ip-pool-group-32 (US East South): US-Southeast (Miami)
+#                                   DNS: 10.213.13.13, 10.208.140.13
+#
+# ip-pool-group-2 (Canada): Canada Central, Canada East
+#                           DNS: 10.208.140.13, 10.213.13.14
+#
+# ip-pool-group-13 (LATAM-Brazil): Brazil East, Paraguay, Brazil South, Brazil Central, Venezuela
+#                                  DNS: 10.133.54.84, 10.208.140.13
+#
+# ip-pool-group-24 (LATAM-Chile): Uruguay, Argentina, Bolivia, Chile, Peru
+#                                 DNS: 10.133.54.84, 10.208.140.13
+#
+# ip-pool-group-30 (LATAM-Peru): South America West (Lima)
+#                                DNS: 10.133.54.84, 10.208.140.13
+#
+# EMEA:
+# emea: Africa, Europe & Middle East
+#       DNS: 10.147.52.18, 10.208.140.14
+#
+# Asia Pacific:
+# ip-pool-group-14 (Australia): New Zealand (Auckland), Australia East, Papua New Guinea,
+#                               Australia Southeast, New Zealand, Australia South
+#                               DNS: 160.95.170.52, 10.183.8.18
+#
+# ip-pool-group-26 (Australia-West): Australia West (Perth)
+#                                    DNS: 160.95.170.52, 10.183.8.18
+#
+# ip-pool-group-15 (Southeast Asia): Indonesia, Singapore, Vietnam, Philippines, Pakistan West (II),
+#                                    Sri Lanka, Myanmar, Malaysia, Cambodia, India South Central, Thailand
+#                                    DNS: 10.183.8.18, 10.213.13.13
+#
+# ip-pool-group-19 (India): Bangladesh, India North, India West, Pakistan South, India South, Pakistan West
+#                           DNS: 10.187.174.96, 10.213.13.13
+#
+# ip-pool-group-16 (Hong Kong): Hong Kong
+#                               DNS: 10.183.8.18, 10.213.13.13
+#
+# ip-pool-group-17 (Taiwan): Taiwan
+#                            DNS: 10.183.8.18, 10.213.13.13
+#
+# ip-pool-group-21 (Japan): Japan Central, Japan South
+#                           DNS: 10.183.8.18, 10.213.13.13
+#
+# apac: Asia, Australia & Japan (aggregated region)
+#       DNS: 10.183.8.18, 10.213.13.13

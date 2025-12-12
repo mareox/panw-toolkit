@@ -1,0 +1,1 @@
+python3 gateway_parser.py /logs/PanGPA.log --recent "30m" --filtered-log last30min.txt

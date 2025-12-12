@@ -1,0 +1,319 @@
+{
+  "data": [
+    {
+      "id": "efbfefbd-2e14-416c-855a-316812b470a8",
+      "name": "Prisma-DC21-SC1",
+      "region": "us-southeast",
+      "ipsec_tunnel": "Prisma-DC21-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.18",
+          "peer_as": "64702",
+          "local_ip_address": "10.137.240.17",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-ACDC-SC1",
+      "redistribution_agent": [
+        {}
+      ],
+      "nat_pool": "10.157.144.0/25"
+    },
+    {
+      "id": "54cfff2a-ea64-47af-9bd5-a6f58d5b533f",
+      "name": "Prisma-DC21-SC2",
+      "region": "us-southeast",
+      "ipsec_tunnel": "Prisma-DC21-SC2",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_as": "64702",
+          "peer_ip_address": "10.137.240.21",
+          "local_ip_address": "10.137.240.22",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-ACDC-SC2",
+      "redistribution_agent": [
+        {}
+      ],
+      "nat_pool": "10.157.144.128/25"
+    },
+    {
+      "id": "f6a668da-b8c9-432f-b932-a45216092947",
+      "name": "Prisma-DC21-SC3",
+      "region": "us-southeast",
+      "ipsec_tunnel": "Prisma-DC21-SC3",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_as": "64702",
+          "peer_ip_address": "10.137.240.25",
+          "local_ip_address": "10.137.240.26",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-ACDC-SC3",
+      "redistribution_agent": [
+        {}
+      ],
+      "nat_pool": "10.157.145.0/25"
+    },
+    {
+      "id": "10088ac1-0b86-4ae8-a2ab-7bcaf2a62017",
+      "name": "Prisma-DC21-SC4",
+      "region": "us-southeast",
+      "ipsec_tunnel": "Prisma-DC21-SC4",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_as": "64702",
+          "peer_ip_address": "10.137.240.29",
+          "local_ip_address": "10.137.240.30",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-ACDC-SC4",
+      "redistribution_agent": [
+        {}
+      ],
+      "nat_pool": "10.157.145.128/25"
+    },
+    {
+      "id": "b37920ea-9529-45f8-8813-5dce8d35d8bd",
+      "name": "Prisma-LD7-SC1",
+      "region": "eu-west-2",
+      "ipsec_tunnel": "Prisma-LD7-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.41",
+          "peer_as": "62437",
+          "local_ip_address": "10.137.240.42",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-ACDC-SC1",
+      "redistribution_agent": [
+        {}
+      ]
+    },
+    {
+      "id": "04788320-6ee7-457a-9d67-1028c255bd2c",
+      "name": "Prisma-LD7-SC2",
+      "region": "eu-west-2",
+      "ipsec_tunnel": "Prisma-LD7-SC2",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.45",
+          "local_ip_address": "10.137.240.46",
+          "peer_as": "62437",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-ACDC-SC2",
+      "redistribution_agent": [
+        {}
+      ]
+    },
+    {
+      "id": "6cf1b317-7930-402b-b46b-57c7bbd63e7f",
+      "name": "Prisma-ACDC-SC1",
+      "region": "us-east-2",
+      "ipsec_tunnel": "Prisma-ACDC-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.50",
+          "peer_as": "65369",
+          "local_ip_address": "10.137.240.49",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-DC21-SC1",
+      "nat_pool": "10.157.146.0/25"
+    },
+    {
+      "id": "5a179252-1761-4ab2-84be-be3ab7e8000d",
+      "name": "Prisma-ACDC-SC2",
+      "region": "us-east-2",
+      "ipsec_tunnel": "Prisma-ACDC-SC2",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.54",
+          "peer_as": "65369",
+          "local_ip_address": "10.137.240.53",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-DC21-SC2",
+      "nat_pool": "10.157.146.128/25"
+    },
+    {
+      "id": "52881254-d6c2-403c-b575-02e56dd59dba",
+      "name": "Prisma-ACDC-SC3",
+      "region": "us-east-2",
+      "ipsec_tunnel": "Prisma-ACDC-SC3",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.58",
+          "peer_as": "65369",
+          "local_ip_address": "10.137.240.57",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-DC21-SC3",
+      "nat_pool": "10.157.147.0/25"
+    },
+    {
+      "id": "e8af98a8-f22a-46e7-83d0-de6f17dc8e90",
+      "name": "Prisma-ACDC-SC4",
+      "region": "us-east-2",
+      "ipsec_tunnel": "Prisma-ACDC-SC4",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.62",
+          "peer_as": "65369",
+          "local_ip_address": "10.137.240.61",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-DC21-SC4",
+      "nat_pool": "10.157.147.128/25"
+    },
+    {
+      "id": "7e9a532c-245a-4810-864c-b69ac1397215",
+      "name": "Prisma-AUS-SC1",
+      "region": "australia-east",
+      "ipsec_tunnel": "Prisma-AUS-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.66",
+          "local_ip_address": "10.137.240.65",
+          "peer_as": "65470",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-SG1C-SC1"
+    },
+    {
+      "id": "1180b89b-65a6-490c-9735-8f7529805270",
+      "name": "Prisma-SG1C-SC1",
+      "region": "ap-southeast-1",
+      "ipsec_tunnel": "Prisma-SG1C-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.70",
+          "local_ip_address": "10.137.240.69",
+          "peer_as": "65471",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "backup_SC": "Prisma-DC21-SC1"
+    },
+    {
+      "id": "42f5cad6-f090-433f-ba13-ebc0c7a54d36",
+      "name": "Prisma-BRZL-SC1",
+      "region": "brazil-central",
+      "ipsec_tunnel": "Prisma-BRZL-SC1",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.82",
+          "local_ip_address": "10.137.240.81",
+          "peer_as": "62932",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      },
+      "onboarding_type": "classic",
+      "backup_SC": "Prisma-ACDC-SC3"
+    },
+    {
+      "id": "258143ba-e912-4447-9328-c70054abfda5",
+      "name": "Prisma-CTCI-SC1",
+      "backup_SC": "Prisma-ACDC-SC3",
+      "region": "ap-south-1",
+      "ipsec_tunnel": "Prisma-CTCI-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "local_ip_address": "10.137.240.73",
+          "peer_ip_address": "10.137.240.74",
+          "peer_as": "64568",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      }
+    },
+    {
+      "id": "d6011cd3-7e71-4415-8a9c-5e75312732dc",
+      "name": "Prisma-UAE-SC1",
+      "region": "uae",
+      "ipsec_tunnel": "Prisma-UAE-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.97",
+          "peer_as": "62437",
+          "local_ip_address": "10.137.240.98"
+        }
+      }
+    },
+    {
+      "id": "58e82727-9bf9-45a0-a6d9-84e40d90f61c",
+      "name": "Prisma-SouthAfrica-SC1",
+      "region": "south-africa-central",
+      "ipsec_tunnel": "Prisma-SouthAfrica-SC1",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_ip_address": "10.137.240.101",
+          "peer_as": "62437",
+          "local_ip_address": "10.137.240.102",
+          "secret": "-AQ==LfUNGsJRMCn0zUg+9+x0RP/EUew=6aY4bPryr7jrNumFqfZLsahgx8mm/88o/8AP6QjqO+M="
+        }
+      }
+    },
+    {
+      "id": "f622dc7e-7911-46bf-937e-cfc854f2230b",
+      "name": "Prisma-CTCI-SC2",
+      "backup_SC": "Prisma-ACDC-SC3",
+      "region": "ap-south-1",
+      "ipsec_tunnel": "Prisma-CTCI-SC2",
+      "onboarding_type": "classic",
+      "protocol": {
+        "bgp": {
+          "enable": true,
+          "peer_as": "64568",
+          "peer_ip_address": "10.137.240.78",
+          "local_ip_address": "10.137.240.77",
+          "secret": "-AQ==9TcfgU0eUyEE30FxhoAMuky3trg=1rk8Z8XixSfh3Vup29leQVBeD0e3UBpfBwG4GQuCIaQ="
+        }
+      }
+    }
+  ],
+  "offset": 0,
+  "total": 17,
+  "limit": 200
+}

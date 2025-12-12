@@ -1,0 +1,107 @@
+[
+  {
+    "id": "d2c5944e-437c-4a4e-896d-8cdffa68b19f",
+    "name": "globalprotect-prismalab.lab.gpcloudservice.com",
+    "folder": "Mobile Users",
+    "dns_servers": [
+      {
+        "name": "worldwide",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.208.140.13"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "azure.com",
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "americas",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.213.13.13"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.13"
+            },
+            "domain_list": [
+              "*.cummins.com",
+              "cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-23",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.208.140.13"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "*.cummins.com",
+              "cummins.com"
+            ]
+          }
+        ]
+      }
+    ],
+    "ip_pools": [
+      {
+        "name": "worldwide",
+        "ip_pool": [
+          "10.56.16.0/22"
+        ]
+      }
+    ],
+    "portal_hostname": {
+      "custom_domain": {
+        "ssl_tls_service_profile": "muCustomDomainSSLProfile",
+        "hostname": "globalprotect-prismalab.cummins.com",
+        "cname": "globalprotect-prismalab"
+      }
+    },
+    "region_ipv6": {
+      "region": [
+        {
+          "name": "americas"
+        },
+        {
+          "name": "europe"
+        },
+        {
+          "name": "apac"
+        }
+      ]
+    },
+    "enable_wins": {
+      "no": {}
+    },
+    "deployment": {
+      "region": [
+        {
+          "name": "americas",
+          "locations": [
+            "us-west-1",
+            "us-southeast",
+            "us-northeast"
+          ]
+        }
+      ]
+    }
+  }
+]

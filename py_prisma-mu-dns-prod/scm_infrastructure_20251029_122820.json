@@ -1,0 +1,433 @@
+{
+  "successful": [],
+  "client_dns_found": [],
+  "not_found": [],
+  "errors": [
+    {
+      "endpoint": "/infrastructure-settings",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?folder=Mobile Users",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?folder=Mobile Users",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?folder=Mobile Users",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?folder=Mobile Users",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?folder=Mobile Users",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?folder=Mobile Users",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?folder=Mobile Users",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?folder=Mobile Users",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users - GP",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users - GP",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?folder=Mobile Users - GP",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?folder=Mobile Users - GP",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?folder=Mobile Users - GP",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?folder=Mobile Users - GP",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?folder=Mobile Users - GP",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?folder=Mobile Users - GP",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?folder=Mobile Users - GP",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?folder=Mobile Users - GP",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=GlobalProtect",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=GlobalProtect",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?folder=GlobalProtect",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?folder=GlobalProtect",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?folder=GlobalProtect",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?folder=GlobalProtect",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?folder=GlobalProtect",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?folder=GlobalProtect",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?folder=GlobalProtect",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?folder=GlobalProtect",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=All",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=All",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?folder=All",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?folder=All",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?folder=All",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?folder=All",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?folder=All",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?folder=All",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?folder=All",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?folder=All",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Shared",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Shared",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?folder=Shared",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?folder=Shared",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?folder=Shared",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?folder=Shared",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?folder=Shared",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?folder=Shared",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?folder=Shared",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?folder=Shared",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=north-america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=north-america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=north-america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=north-america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=north-america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=north-america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=north-america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=north-america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=north-america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=north-america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=us-western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=us-western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=us-western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=us-western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=us-western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=us-western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=us-western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=us-western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=us-western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=us-western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=global",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=global",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=global",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=global",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=global",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=global",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=global",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=global",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=global",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=global",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?location=Americas",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?location=Americas",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-infrastructure-settings?location=Americas",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-infrastructure-settings?location=Americas",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users/infrastructure-settings?location=Americas",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users/infrastructure-settings?location=Americas",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/mobile-users-globalprotect/infrastructure-settings?location=Americas",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/mobile-users-globalprotect/infrastructure-settings?location=Americas",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure/settings?location=Americas",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure/settings?location=Americas",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users&location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users&location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users&location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users&location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users&location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users&location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users - GP&location=worldwide",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users - GP&location=worldwide",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users - GP&location=North america",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users - GP&location=North america",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    },
+    {
+      "endpoint": "/infrastructure-settings?folder=Mobile Users - GP&location=US-Western",
+      "url": "https://api.sase.paloaltonetworks.com/sse/config/v1/infrastructure-settings?folder=Mobile Users - GP&location=US-Western",
+      "status_code": 403,
+      "response": "\n        {\n        \"msg\": \"Access denied\"\n        }\n      "
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+netflix.com
+*.netflix.com
+google.com
+*.google.com
+yahoo.com
+*.yahoo.com
+github.com
+*.github.com
+

@@ -1,0 +1,860 @@
+[
+  {
+    "id": "0018f0d5-a6de-4a51-949e-278c20e82fb3",
+    "name": "globalprotect-prisma.gpcloudservice.com",
+    "folder": "Mobile Users",
+    "dns_servers": [
+      {
+        "name": "worldwide",
+        "primary_public_dns": {
+          "dns_server": "10.208.140.13"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.14"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.208.140.13"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.14"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-1",
+        "primary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.213.13.13"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-31",
+        "primary_public_dns": {
+          "dns_server": "10.208.140.13"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.14"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.208.140.13"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.14"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-23",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.208.140.13"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.14"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com",
+              "*.adb.us-ashburn-1.oraclecloud.com",
+              "adb.us-ashburn-1.oraclecloud.com",
+              "*.adb.us-phoenix-1.oraclecloud.com",
+              "adb.us-phoenix-1.oraclecloud.com",
+              "*.api.azureml.ms",
+              "api.azureml.ms",
+              "*.api.ml.azure.cn",
+              "api.ml.azure.cn",
+              "*.azure-api.net",
+              "azure-api.net",
+              "*.azure-automation.net",
+              "azure-automation.net",
+              "*.azure-devices.net",
+              "azure-devices.net",
+              "*.azurehdinsight.net",
+              "azurehdinsight.net",
+              "*.bfcec.com",
+              "bfcec.com",
+              "*.cdn.office.net",
+              "cdn.office.net",
+              "*.cigna.com",
+              "cigna.com",
+              "*.cmicbs.com",
+              "cmicbs.com",
+              "*.core.windows.net",
+              "core.windows.net",
+              "*.cummins.com.cn",
+              "cummins.com.cn",
+              "*.cummins-cq.com",
+              "cummins-cq.com",
+              "*.datafactory.azure.net",
+              "datafactory.azure.net",
+              "*.dcec.com.cn",
+              "dcec.com.cn",
+              "*.developer.azure-api.net",
+              "developer.azure-api.net",
+              "*.documents.azure.com",
+              "documents.azure.com",
+              "*.gotoassist.com",
+              "gotoassist.com",
+              "*.ifs.cloud",
+              "ifs.cloud",
+              "*.inlab.com",
+              "inlab.com",
+              "*.isp.bfces.com",
+              "isp.bfces.com",
+              "*.login.live.com",
+              "login.live.com",
+              "*.meritor.com",
+              "meritor.com",
+              "*.ocsp.digicert.com",
+              "ocsp.digicert.com",
+              "*.openai.azure.com",
+              "openai.azure.com",
+              "*.oraclevcn.com",
+              "oraclevcn.com",
+              "*.prd.automdir.com",
+              "prd.automdir.com",
+              "*.private.zscaler.com",
+              "private.zscaler.com",
+              "*.privatelink.notebooks.azure.net",
+              "privatelink.notebooks.azure.net",
+              "*.prod.zpath.net",
+              "prod.zpath.net",
+              "*.prod.zpath.vip",
+              "prod.zpath.vip",
+              "*.siterecovery.windowsazure.com",
+              "siterecovery.windowsazure.com",
+              "*.swmpeha.opswan-sw.com",
+              "swmpeha.opswan-sw.com",
+              "*.time.windows.com",
+              "time.windows.com",
+              "*.vaultcore.azure.net",
+              "vaultcore.azure.net",
+              "*.windows.net",
+              "windows.net",
+              "*.zdxcloud.net",
+              "zdxcloud.net",
+              "*.zscaler.net",
+              "zscaler.net",
+              "*.zscalertwo.net",
+              "zscalertwo.net",
+              "24ea30bb.production-orch-0310.neo4j.io",
+              "*.cumminsfiltration.com",
+              "cumminsfiltration.com",
+              "cdaws.fca-tools.com",
+              "clientconfig.passport.net",
+              "cognitiveservices.azure.com",
+              "cummins.palantirfoundry.com",
+              "cummins-prods360int.mdm.informaticahosted.com",
+              "directline.botframework.com",
+              "ebstest.xcec.com",
+              "*.servicebus.chinacloudapi.cn",
+              "servicebus.chinacloudapi.cn",
+              "FCESLPORADB01.bfces.com",
+              "guest.infosys.com",
+              "ibpn.paccar.com",
+              "intra.fcagroup.com",
+              "*.azure-devices.cn",
+              "azure-devices.cn",
+              "linintra.meritorauto.com",
+              "make.powerapps.com",
+              "ml-amlpds01cnde-chinaeast2-c1101a7b-6dd1-4c91-81fa-f9d2e0fac781.chinaeast2.notebooks.chinacloudapi.cn",
+              "mobilesupport.zscaler.com",
+              "*.mysql.database.azure.com",
+              "mysql.database.azure.com",
+              "*.officecdn.microsoft.com",
+              "officecdn.microsoft.com",
+              "*.privatelink.postgres.database.azure.com",
+              "privatelink.postgres.database.azure.com",
+              "portal.emea.daa.intra.fcagroup.com",
+              "portal.nafta.daa.intra.fcagroup.com",
+              "production-orch-0310.neo4j.io",
+              "production-orch-0428.neo4j.io",
+              "rise2021.vtour.tech",
+              "secure2.entreprises.bnpparibas.net",
+              "slpfinanzas.gob.mx",
+              "taxes.hsbc.com.mx",
+              "token.botframework.com",
+              "ttecafm.algurggroup.com",
+              "wsdealerconnect.chrysler.com",
+              "www.mercante.transportes.gov.br",
+              "www.msftncsi.com",
+              "*.xcec.com.cn",
+              "xcec.com.cn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "emea",
+        "primary_public_dns": {
+          "dns_server": "10.147.52.18"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.14"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.147.52.18"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.14"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-14",
+        "primary_public_dns": {
+          "dns_server": "160.95.170.52"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "160.95.170.52"
+            },
+            "secondary": {
+              "dns_server": "10.183.8.18"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-26",
+        "primary_public_dns": {
+          "dns_server": "160.95.170.52"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "160.95.170.52"
+            },
+            "secondary": {
+              "dns_server": "10.183.8.18"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-15",
+        "primary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "primary": {
+              "dns_server": "10.183.8.18"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-19",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.187.174.96"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ],
+        "primary_public_dns": {
+          "dns_server": "10.187.174.96"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.13"
+        }
+      },
+      {
+        "name": "ip-pool-group-13",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.133.54.84"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ],
+        "primary_public_dns": {
+          "dns_server": "10.133.54.84"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.13"
+        }
+      },
+      {
+        "name": "ip-pool-group-2",
+        "primary_public_dns": {
+          "dns_server": "10.208.140.13"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.14"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.208.140.13"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.14"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          },
+          {
+            "name": "Prismaaccess",
+            "primary": {
+              "use_cloud_default": {}
+            },
+            "secondary": {
+              "use_cloud_default": {}
+            },
+            "domain_list": [
+              "prismaaccess.com",
+              "*.prismaaccess.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-24",
+        "primary_public_dns": {
+          "dns_server": "10.133.54.84"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.133.54.84"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-30",
+        "primary_public_dns": {
+          "dns_server": "10.133.54.84"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.133.54.84"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-17",
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "primary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.183.8.18"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-21",
+        "primary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.183.8.18"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-16",
+        "primary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.183.8.18"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          },
+          {
+            "name": "Prismaaccess",
+            "primary": {
+              "use_cloud_default": {}
+            },
+            "secondary": {
+              "use_cloud_default": {}
+            },
+            "domain_list": [
+              "prismaaccess.com",
+              "*.prismaaccess.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "apac",
+        "primary_public_dns": {
+          "dns_server": "10.183.8.18"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.183.8.18"
+            },
+            "secondary": {
+              "dns_server": "10.213.13.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ip-pool-group-32",
+        "internal_dns_match": [
+          {
+            "name": "CumminsDNS",
+            "primary": {
+              "dns_server": "10.213.13.13"
+            },
+            "secondary": {
+              "dns_server": "10.208.140.13"
+            },
+            "domain_list": [
+              "cummins.com",
+              "*.cummins.com"
+            ]
+          }
+        ],
+        "primary_public_dns": {
+          "dns_server": "10.213.13.13"
+        },
+        "secondary_public_dns": {
+          "dns_server": "10.208.140.13"
+        }
+      }
+    ],
+    "ip_pools": [
+      {
+        "name": "worldwide",
+        "ip_pool": [
+          "10.137.190.0/23",
+          "10.137.188.0/23",
+          "10.137.178.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-31",
+        "ip_pool": [
+          "10.137.0.0/23",
+          "10.137.2.0/23",
+          "10.137.4.0/23",
+          "10.137.6.0/23",
+          "10.157.0.0/21",
+          "10.157.16.0/21",
+          "10.157.40.0/21",
+          "10.137.24.0/23",
+          "10.137.26.0/23",
+          "10.137.28.0/23",
+          "10.137.30.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-1",
+        "ip_pool": [
+          "10.137.8.0/23",
+          "10.137.10.0/23",
+          "10.137.12.0/23",
+          "10.137.14.0/23",
+          "10.157.8.0/21",
+          "10.157.24.0/21",
+          "10.157.32.0/21",
+          "10.157.56.0/21",
+          "10.157.64.0/21"
+        ]
+      },
+      {
+        "name": "ip-pool-group-23",
+        "ip_pool": [
+          "10.137.16.0/23",
+          "10.137.18.0/23",
+          "10.137.20.0/23",
+          "10.137.22.0/23",
+          "10.157.48.0/21"
+        ]
+      },
+      {
+        "name": "ip-pool-group-33",
+        "ip_pool": [
+          "10.137.32.0/23",
+          "10.137.34.0/23",
+          "10.137.36.0/23",
+          "10.137.38.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-2",
+        "ip_pool": [
+          "10.137.40.0/23",
+          "10.137.42.0/23",
+          "10.137.44.0/23",
+          "10.137.46.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-13",
+        "ip_pool": [
+          "10.137.56.0/21",
+          "10.137.64.0/22"
+        ]
+      },
+      {
+        "name": "emea",
+        "ip_pool": [
+          "10.137.72.0/21",
+          "10.137.80.0/21",
+          "10.137.88.0/21",
+          "10.137.144.0/21",
+          "10.157.72.0/21"
+        ]
+      },
+      {
+        "name": "ip-pool-group-19",
+        "ip_pool": [
+          "10.137.96.0/21",
+          "10.137.104.0/21",
+          "10.137.112.0/21",
+          "10.137.142.0/23",
+          "10.137.152.0/23",
+          "10.137.154.0/23",
+          "10.137.156.0/23",
+          "10.137.158.0/23",
+          "10.137.160.0/23",
+          "10.137.162.0/23",
+          "10.137.164.0/23",
+          "10.137.174.0/23",
+          "10.157.80.0/21",
+          "10.157.88.0/21"
+        ]
+      },
+      {
+        "name": "ip-pool-group-14",
+        "ip_pool": [
+          "10.137.120.0/23",
+          "10.137.122.0/23",
+          "10.137.124.0/23",
+          "10.137.126.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-15",
+        "ip_pool": [
+          "10.137.132.0/23",
+          "10.137.134.0/23",
+          "10.137.136.0/23",
+          "10.137.138.0/23",
+          "10.137.140.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-21",
+        "ip_pool": [
+          "10.137.170.0/23",
+          "10.137.172.0/23",
+          "10.137.176.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-16",
+        "ip_pool": [
+          "10.137.166.0/23",
+          "10.137.182.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-17",
+        "ip_pool": [
+          "10.137.168.0/23",
+          "10.137.184.0/23"
+        ]
+      },
+      {
+        "name": "ip-pool-group-24",
+        "ip_pool": [
+          "10.137.180.0/23"
+        ]
+      }
+    ],
+    "region_ipv6": {
+      "region": [
+        {
+          "name": "americas"
+        },
+        {
+          "name": "europe"
+        },
+        {
+          "name": "apac"
+        }
+      ]
+    },
+    "enable_wins": {
+      "no": {}
+    },
+    "deployment": {
+      "region": [
+        {
+          "name": "americas",
+          "locations": [
+            "us-west-2",
+            "us-east-1",
+            "us-south",
+            "brazil-central",
+            "us-west-1",
+            "us-east-2",
+            "us-southeast",
+            "us-west-201",
+            "ca-central-1",
+            "canada-west",
+            "canada-central",
+            "us-northeast",
+            "us-west-3",
+            "mexico-central",
+            "mexico-west",
+            "sa-east-1",
+            "brazil-east",
+            "argentina",
+            "columbia",
+            "paraguay",
+            "guatemala",
+            "costa-rica",
+            "panama",
+            "bolivia",
+            "peru",
+            "chile"
+          ]
+        },
+        {
+          "name": "europe",
+          "locations": [
+            "eu-west-2",
+            "nigeria",
+            "south-africa-west",
+            "south-africa-central",
+            "uae",
+            "saudi-arabia",
+            "kazakhstan",
+            "turkey",
+            "kuwait",
+            "kenya",
+            "senegal",
+            "eu-central-1",
+            "sweden",
+            "austria",
+            "germany-north",
+            "germany-south",
+            "italy",
+            "poland",
+            "spain-east",
+            "spain-central",
+            "eu-west-1",
+            "netherlands-central",
+            "czech-republic",
+            "belgium",
+            "denmark",
+            "greece",
+            "netherlands-south",
+            "russia-central",
+            "russia-northwest",
+            "ghana",
+            "eu-west-3",
+            "france-south",
+            "hungary",
+            "norway",
+            "qatar",
+            "romania"
+          ]
+        },
+        {
+          "name": "apac",
+          "locations": [
+            "ap-southeast-1",
+            "australia-south",
+            "india-north",
+            "ap-south-1",
+            "australia-east",
+            "ap-southeast-2",
+            "new-zealand",
+            "india-south",
+            "hong-kong",
+            "indonesia",
+            "malaysia",
+            "philippines",
+            "ap-northeast-2",
+            "thailand",
+            "vietnam",
+            "srilanka",
+            "ap-northeast-1",
+            "japan-south",
+            "taiwan"
+          ]
+        }
+      ]
+    },
+    "portal_hostname": {
+      "custom_domain": {
+        "ssl_tls_service_profile": "muCustomDomainSSLProfile",
+        "hostname": "globalprotect-prisma.cummins.com",
+        "cname": "globalprotect-prisma"
+      }
+    }
+  }
+]

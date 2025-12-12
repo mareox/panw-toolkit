@@ -1,0 +1,500 @@
+#!/usr/bin/env python3
+
+#
+# Copyright (c) 2025 Palo Alto Networks, Inc.
+#
+# Permission to use, copy, modify, and distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+#
+
+import aiohttp
+import argparse
+import asyncio
+from collections import defaultdict
+import csv
+import hashlib
+import os
+from pathlib import Path
+import re
+import sys
+from typing import Optional
+import warnings
+
+try:
+    from cryptography import x509
+    from cryptography.hazmat.primitives import hashes
+except ImportError:
+    print('Install cryptography: https://pypi.org/project/cryptography/',
+          file=sys.stderr)
+    sys.exit(1)
+
+libpath = os.path.dirname(os.path.abspath(__file__))
+sys.path[:0] = [os.path.join(libpath, os.pardir)]
+
+from pan_chainguard import title, __version__
+from pan_chainguard.ccadb import revoked, valid_from, valid_to
+
+DOWNLOAD_TIMEOUT = 5
+
+args = None
+downloads = {}
+
+
+def main():
+    global args
+    args = parse_args()
+
+    asyncio.run(main_loop())
+
+    sys.exit(0)
+
+
+async def main_loop():
+    if args.debug:
+        for k, v in vendors.items():
+            if k == 'all':
+                continue
+            for x in v:
+                print(k, x.__name__, x.url, file=sys.stderr)
+
+    vendors_ = set(args.vendor)
+    timeout = aiohttp.ClientTimeout(total=DOWNLOAD_TIMEOUT)
+
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        urls = set([x.url for vendor in vendors_
+                    for x in vendors[vendor]])
+        tasks = [download(session, url) for url in urls]
+        await asyncio.gather(*tasks)
+
+    if args.debug > 1:
+        for x in downloads:
+            r, v = downloads[x]
+            if not r:
+                print(x, v, file=sys.stderr)
+            else:
+                print(x, len(v), file=sys.stderr)
+
+    ccadb = None
+    if args.ccadb:
+        ccadb = load_ccadb(args.ccadb)
+
+    for k, v in vendors.items():
+        if k in vendors_:
+            for x in v:
+                fingerprints = x()
+                if fingerprints is None:
+                    continue
+                messages = check_validity(ccadb, fingerprints)
+                m = []
+                for type_ in sorted(messages.keys()):
+                    m.append(f'{len(messages[type_])} {type_}')
+                summary = ''
+                if m:
+                    summary = ', '.join(m)
+                    summary = ' (%s)' % summary
+                print(f'{x.__name__}: '
+                      f'{len(fingerprints)} root CAs{summary}')
+                if args.verbose:
+                    for type_ in sorted(messages.keys()):
+                        for msg in messages[type_]:
+                            print(f'{x.__name__}: {msg}')
+                if args.save:
+                    path = args.save / f'{x.__name__}.txt'
+                    digest = save(path, sorted(fingerprints))
+                    if digest and args.verbose:
+                        print(f'Saved fingerprints '
+                              f'(SHA256 {digest}) to {path}')
+
+
+async def download(session, url):
+    try:
+        async with session.get(url) as response:
+            if response.status != 200:
+                x = (f'Error: status code {response.status}')
+                downloads[url] = False, x
+                return
+
+            content = await response.text()
+            if args.verbose:
+                print(f'Downloaded {len(content)} bytes from {url}')
+            downloads[url] = True, content
+
+    except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+        x = 'Request failed: ' + (str(e) or type(e).__name__)
+        downloads[url] = False, x
+    except Exception as e:
+        msg = str(e)
+        x = f'Unexpected {type(e).__name__}' + (': ' + msg if msg else '')
+        downloads[url] = False, x
+
+
+def pem_cert_fingerprint(data: bytes) -> Optional[str]:
+    try:
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter('always')
+            cert = x509.load_pem_x509_certificate(data)
+            sha256 = cert.fingerprint(hashes.SHA256()).hex().upper()
+
+        if args.debug:
+            for warn in w:
+                print(f'{warn.category.__name__}: {warn.message}',
+                      file=sys.stderr)
+                print('SHA256', sha256, file=sys.stderr)
+
+        return sha256
+
+    except Exception as e:
+        # Future-proof: cryptography may raise instead of warn
+        pem_sha256 = hashlib.sha256(data).hexdigest().upper()
+        print(f'{type(e).__name__}: {e}', file=sys.stderr)
+        print('Failed to load cert. PEM blob SHA256', pem_sha256,
+              file=sys.stderr)
+        return
+
+
+def load_ccadb(path):
+    ccadb = defaultdict(list)
+    try:
+        with open(path, 'r', newline='') as csvfile:
+            reader = csv.DictReader(csvfile,
+                                    dialect='unix')
+            for row in reader:
+                sha256 = row['SHA-256 Fingerprint']
+                ccadb[sha256].append(row)
+
+    except OSError as e:
+        print('%s: %s' % (path, e), file=sys.stderr)
+        sys.exit(1)
+
+    return ccadb
+
+
+def check_validity(ccadb, fingerprints):
+    if not ccadb:
+        return {}
+
+    messages = defaultdict(list)
+
+    for sha256 in fingerprints:
+        if sha256 not in ccadb:
+            msg = f'Not in CCADB: {sha256}'
+            messages['not in ccadb'].append(msg)
+            continue
+
+        row = ccadb[sha256][0]
+        name = row['Certificate Name']
+        cert_type = row['Certificate Record Type']
+
+        x = 'Root Certificate'
+        if len(ccadb[sha256]) == 1 and cert_type != x:
+            msg = f'Not a {x}: {sha256} "{name}"'
+            messages['not root'].append(msg)
+
+        if len(ccadb[sha256]) > 1:
+            total = defaultdict(int)
+            for x in ccadb[sha256]:
+                if x['Certificate Record Type'] == 'Root Certificate':
+                    total['R'] += 1
+                elif (x['Certificate Record Type'] ==
+                      'Intermediate Certificate'):
+                    total['I'] += 1
+                else:
+                    raise RuntimeError(x['Certificate Record Type'])
+            totals = ' '.join(f'{k}={v}' for k, v in total.items())
+            msg = (f'{len(ccadb[sha256])} duplicate certificates: '
+                   f'{sha256} {totals} "{name}"')
+            messages['duplicates'].append(msg)
+
+        ret, err = revoked(row)
+        if ret:
+            msg = f'{err}: {sha256} "{name}"'
+            messages['revoked'].append(msg)
+
+        ret, err = valid_from(row)
+        if not ret:
+            msg = f'{err}: {sha256} "{name}"'
+            messages['not yet valid'].append(msg)
+
+        ret, err = valid_to(row)
+        if not ret:
+            msg = f'{err}: {sha256} "{name}"'
+            messages['expired'].append(msg)
+
+    return messages
+
+
+def save(path, fingerprints):
+    data = '\n'.join(fingerprints) + '\n'
+    try:
+        with open(path, 'w') as f:
+            f.write(data)
+    except OSError as e:
+        print(f'{path}: {e}', file=sys.stderr)
+        return
+
+    return hashlib.sha256(data.encode()).hexdigest()
+
+
+def websites_trusted(vendor, row):
+    def mozilla(row):
+        ret = (row['Mozilla Status'] == 'Included' and
+               'Websites' in row['Mozilla Trust Bits'].split(';'))
+        return ret
+
+    def microsoft(row):
+        ret = (row['Microsoft Status'] == 'Included' and
+               'Server Authentication' in row['Microsoft EKUs'].split(';'))
+        return ret
+
+    def chrome(row):
+        ret = row['Google Chrome Status'] == 'Included'
+        return ret
+
+    def apple(row):
+        ret = (row['Apple Status'] == 'Included' and
+               'serverAuth' in row['Apple Trust Bits'].split(';'))
+        return ret
+
+    return locals()[vendor](row)
+
+
+def set_url(url):
+    def decorator(func):
+        func.url = url
+        return func
+    return decorator
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/ccadb/'
+         'AllIncludedRootCertsCSV')
+def mozilla_0() -> Optional[list]:
+    url = mozilla_0.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{mozilla_0.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        if websites_trusted('mozilla', row):
+            fingerprints.append(row['SHA-256 Fingerprint'])
+
+    return fingerprints
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/mozilla/'
+         'IncludedRootsDistrustTLSSSLPEMCSV?TrustBitsInclude=Websites')
+def mozilla_1() -> Optional[list]:
+    url = mozilla_1.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{mozilla_1.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        pem = row.get('PEM')
+        if pem:
+            fingerprint = pem_cert_fingerprint(pem.encode())
+            if fingerprint is not None:
+                fingerprints.append(fingerprint)
+
+    return fingerprints
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/ccadb/'
+         'AllIncludedRootCertsCSV')
+def microsoft_0() -> Optional[list]:
+    url = microsoft_0.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{microsoft_0.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        if websites_trusted('microsoft', row):
+            fingerprints.append(row['SHA-256 Fingerprint'])
+
+    return fingerprints
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/microsoft/'
+         'IncludedRootsPEMCSVForMSFT?MicrosoftEKUs=Server Authentication')
+def microsoft_1() -> Optional[list]:
+    url = microsoft_1.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{microsoft_1.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        pem = row.get('PEM')
+        if pem:
+            fingerprint = pem_cert_fingerprint(pem.encode())
+            if fingerprint is not None:
+                fingerprints.append(fingerprint)
+
+    return fingerprints
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/microsoft/'
+         'IncludedCACertificateReportForMSFTCSV')
+def microsoft_2() -> Optional[list]:
+    url = microsoft_2.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{microsoft_2.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        status = row['Microsoft Status']
+        if status != 'Included':
+            continue
+        sha256 = row['SHA-256 Fingerprint']
+        trust_bits = row['Microsoft EKUs'].split(';')
+        if 'Server Authentication' not in trust_bits:
+            continue
+        fingerprints.append(sha256)
+
+    return fingerprints
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/ccadb/'
+         'AllIncludedRootCertsCSV')
+def chrome_0() -> Optional[list]:
+    url = chrome_0.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{chrome_0.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        if websites_trusted('chrome', row):
+            fingerprints.append(row['SHA-256 Fingerprint'])
+
+    return fingerprints
+
+
+@set_url('https://raw.githubusercontent.com/chromium/chromium/'
+         'main/net/data/ssl/chrome_root_store/root_store.certs')
+def chrome_1() -> Optional[list]:
+    url = chrome_1.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{chrome_1.__name__}: {data}', file=sys.stderr)
+        return
+
+    PEM_PATTERN = re.compile(
+        r'-----BEGIN CERTIFICATE-----(.*?)-----END CERTIFICATE-----',
+        re.DOTALL
+    )
+    matches = PEM_PATTERN.findall(data)
+    certs = [
+        f'-----BEGIN CERTIFICATE-----{m}-----END CERTIFICATE-----'
+        for m in matches
+    ]
+
+    fingerprints = []
+    for pem in certs:
+        fingerprint = pem_cert_fingerprint(pem.encode())
+        if fingerprint is not None:
+            fingerprints.append(fingerprint)
+
+    return fingerprints
+
+
+@set_url('https://ccadb.my.salesforce-sites.com/ccadb/'
+         'AllIncludedRootCertsCSV')
+def apple_0() -> Optional[list]:
+    url = apple_0.url
+    r, data = downloads[url]
+    if not r:
+        print(f'{apple_0.__name__}: {data}', file=sys.stderr)
+        return
+
+    reader = csv.DictReader(data.splitlines())
+
+    fingerprints = []
+    for row in reader:
+        if websites_trusted('apple', row):
+            fingerprints.append(row['SHA-256 Fingerprint'])
+
+    return fingerprints
+
+
+vendors = {
+    'mozilla': [mozilla_0, mozilla_1],
+    'microsoft': [microsoft_0, microsoft_1, microsoft_2],
+    'chrome': [chrome_0, chrome_1],
+    'apple': [apple_0],
+}
+vendors['all'] = [x for vendor in vendors
+                  for x in vendors[vendor]]
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        usage='%(prog)s [options]',
+        description='vendor root CA program analysis')
+    parser.add_argument('-V', '--vendor',
+                        action='append',
+                        required=True,
+                        choices=vendors.keys(),
+                        help='vendor')
+    parser.add_argument('-s', '--save',
+                        metavar='DIR',
+                        type=Path,
+                        help='save fingerprints to directory')
+    # https://ccadb.my.salesforce-sites.com/ccadb/AllCertificateRecordsCSVFormatv4
+    parser.add_argument('-c', '--ccadb',
+                        metavar='PATH',
+                        type=Path,
+                        help='CCADB all certificate information CSV path')
+    parser.add_argument('--verbose',
+                        action='store_true',
+                        help='enable verbosity')
+    parser.add_argument('--debug',
+                        type=int,
+                        choices=[0, 1, 2, 3],
+                        default=0,
+                        help='enable debug')
+    x = '%s %s' % (title, __version__)
+    parser.add_argument('--version',
+                        action='version',
+                        help='display version',
+                        version=x)
+    args = parser.parse_args()
+
+    if args.debug:
+        print(args, file=sys.stderr)
+
+    return args
+
+
+if __name__ == '__main__':
+    main()

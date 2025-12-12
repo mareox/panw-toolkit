@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "name": "us-central",
+      "allocated_bandwidth": 500,
+      "spn_name_list": [
+        "us-central-lychee"
+      ]
+    },
+    {
+      "name": "us-east",
+      "allocated_bandwidth": 500,
+      "spn_name_list": [
+        "us-east-jonquil"
+      ]
+    }
+  ],
+  "offset": 0,
+  "total": 2,
+  "limit": 200
+}

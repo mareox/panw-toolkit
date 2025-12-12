@@ -1,0 +1,141 @@
+[
+  {
+    "id": "0f6fad73-d0ca-49d4-bc00-b24e7e1f6846",
+    "name": "web-security-default",
+    "folder": "All",
+    "snippet": "Web-Security-Default",
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "max_version": "max",
+      "keyxchg_algo_rsa": true,
+      "keyxchg_algo_dhe": true,
+      "keyxchg_algo_ecdhe": true,
+      "auth_algo_sha256": true,
+      "auth_algo_sha384": true,
+      "enc_algo_aes_128_cbc": true,
+      "enc_algo_aes_256_cbc": true,
+      "enc_algo_aes_128_gcm": true,
+      "enc_algo_aes_256_gcm": true,
+      "enc_algo_chacha20_poly1305": true,
+      "auth_algo_sha1": false
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true,
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true,
+      "block_unknown_cert": true,
+      "restrict_cert_exts": true,
+      "strip_alpn": true,
+      "block_client_cert": true,
+      "auto_include_altname": true
+    },
+    "ssl_no_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true
+    },
+    "ssl_inbound_proxy": {
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true
+    }
+  },
+  {
+    "id": "59f005f7-d284-4a98-bcb4-16a671a2f57e",
+    "name": "best-practice",
+    "folder": "All",
+    "snippet": "predefined-snippet",
+    "ssl_no_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true,
+      "block_unknown_cert": true,
+      "restrict_cert_exts": true,
+      "auto_include_altname": true,
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true,
+      "block_client_cert": true
+    },
+    "ssl_inbound_proxy": {
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true
+    },
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "enc_algo_3des": false,
+      "enc_algo_rc4": false,
+      "auth_algo_sha1": false
+    }
+  },
+  {
+    "id": "a8d13ed9-dbf8-4dee-9dd6-93950906d042",
+    "name": "Decryption-With-Cert-Check",
+    "folder": "Mobile Users Container",
+    "ssl_no_proxy": {
+      "block_expired_certificate": false,
+      "block_untrusted_issuer": false
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": true,
+      "block_unknown_cert": true,
+      "restrict_cert_exts": true,
+      "auto_include_altname": true,
+      "block_unsupported_version": true,
+      "block_unsupported_cipher": true,
+      "block_client_cert": false,
+      "strip_alpn": false
+    },
+    "ssl_inbound_proxy": {
+      "block_unsupported_version": false,
+      "block_unsupported_cipher": false
+    },
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "enc_algo_3des": true,
+      "enc_algo_rc4": true,
+      "auth_algo_sha1": true,
+      "max_version": "tls1-2",
+      "enc_algo_chacha20_poly1305": false
+    }
+  },
+  {
+    "id": "36d8ec01-e29b-4bbf-af35-10b2c26cbc24",
+    "name": "No-Decryption-With-Inspection",
+    "folder": "Mobile Users Container",
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "max_version": "tls1-2",
+      "enc_algo_chacha20_poly1305": false
+    },
+    "ssl_no_proxy": {
+      "block_expired_certificate": true,
+      "block_untrusted_issuer": false
+    }
+  },
+  {
+    "id": "d662c537-d9ca-4f22-913b-33896ca95cd3",
+    "name": "Decryption-No-Cert-Check",
+    "folder": "Mobile Users Container",
+    "ssl_protocol_settings": {
+      "min_version": "tls1-2",
+      "max_version": "tls1-2",
+      "enc_algo_chacha20_poly1305": false
+    },
+    "ssl_no_proxy": {
+      "block_expired_certificate": false,
+      "block_untrusted_issuer": false
+    },
+    "ssl_forward_proxy": {
+      "block_expired_certificate": false,
+      "block_untrusted_issuer": false,
+      "block_unsupported_version": false,
+      "block_unsupported_cipher": false,
+      "block_unknown_cert": false,
+      "restrict_cert_exts": false,
+      "auto_include_altname": false
+    }
+  }
+]

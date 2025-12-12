@@ -1,0 +1,21 @@
+# Prisma SASE API Configuration
+# Copy this file to config.yaml and fill in your credentials
+
+api:
+  # Service Account credentials from Prisma Access
+  # Create at: Settings > Identity & Access > Service Accounts
+  client_id: "your-client-id@1234567890.iam.panserviceaccount.com"
+  client_secret: "your-client-secret-here"
+
+  # Tenant Service Group ID (TSG ID)
+  # Find at: Settings > Service Setup > Tenant Service Group
+  tsg_id: "1234567890"
+
+# Optional: Configure DNS rule settings
+dns:
+  # Name of the internal domain resolution rule
+  rule_name: "CustomDNS"
+
+  # Public DNS configuration
+  # Options: "prisma_access_default" or "custom"
+  public_dns_type: "prisma_access_default"

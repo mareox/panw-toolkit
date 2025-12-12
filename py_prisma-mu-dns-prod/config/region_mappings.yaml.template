@@ -1,0 +1,50 @@
+# Region Name Mappings
+# Map technical region names to friendly display names
+#
+# To use: Copy this file to region_mappings.yaml and update with your actual region names
+# You can find these in Prisma Access console: Mobile Users > Infrastructure Settings > Client DNS
+
+region_names:
+  # Standard aggregated regions
+  worldwide: "Worldwide"
+  emea: "EMEA"
+  apac: "APAC"
+
+  # IP Pool Groups - UPDATE THESE WITH YOUR ACTUAL REGION NAMES
+  # Check your Prisma Access console to see what each ip-pool-group represents
+
+  ip-pool-group-1: "Unknown Region 1"    # Example: "US-Eastern" or "US East"
+  ip-pool-group-2: "Unknown Region 2"    # Example: "US-Western" or "US West"
+  ip-pool-group-13: "Unknown Region 13"  # Example: "US-Central"
+  ip-pool-group-14: "Unknown Region 14"  # Example: "Europe-West"
+  ip-pool-group-15: "Unknown Region 15"
+  ip-pool-group-16: "Unknown Region 16"
+  ip-pool-group-17: "Unknown Region 17"
+  ip-pool-group-19: "Unknown Region 19"
+  ip-pool-group-21: "Unknown Region 21"
+  ip-pool-group-23: "Unknown Region 23"
+  ip-pool-group-24: "Unknown Region 24"
+  ip-pool-group-26: "Unknown Region 26"
+  ip-pool-group-30: "Unknown Region 30"
+  ip-pool-group-31: "Unknown Region 31"
+  ip-pool-group-32: "Unknown Region 32"
+
+# Example common Prisma Access regions (for reference):
+# - US East / US-Eastern
+# - US West / US-Western
+# - US Central / US-Central
+# - US Northwest / US-Northwest
+# - US Southeast / US-Southeast
+# - Canada Central
+# - Canada East
+# - Brazil Central
+# - Europe West
+# - Europe Central
+# - UK West
+# - Japan
+# - Taiwan
+# - Hong Kong
+# - Australia East
+# - Australia South
+# - Singapore
+# - India South

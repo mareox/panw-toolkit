@@ -1,0 +1,6 @@
+domain
+*.internal.company.com
+*.corp.example.com
+intranet.company.com
+*.dev.company.com
+*.staging.company.com
