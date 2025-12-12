@@ -6,6 +6,7 @@ Get region name mappings from Panorama API
 import json
 import yaml
 import requests
+from src.panorama_utils import build_panorama_base_url
 
 # Get token
 with open('config/config.yaml', 'r') as f:
@@ -34,7 +35,8 @@ headers = {
     'Accept': 'application/json'
 }
 
-base_url = f"https://{panorama_region}.prod.panorama.paloaltonetworks.com/api/config/v9.2/configByPath"
+panorama_base = build_panorama_base_url(panorama_region)
+base_url = f"{panorama_base}/api/config/v9.2/configByPath"
 
 # Get all configs which should have region display names
 prefix = "global-protect/global-protect-portal/entry[@name='GlobalProtect_Portal']/client-config/configs"

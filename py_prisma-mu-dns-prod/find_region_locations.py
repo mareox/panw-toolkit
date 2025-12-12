@@ -6,6 +6,7 @@ Find region location mappings
 import json
 import yaml
 import requests
+from src.panorama_utils import build_panorama_base_url
 
 # Get token
 with open('config/config.yaml', 'r') as f:
@@ -86,7 +87,8 @@ print()
 
 # Check compute locations in Panorama API
 panorama_region = config['api']['panorama_region']
-panorama_url = f"https://{panorama_region}.prod.panorama.paloaltonetworks.com/api/config/v9.2/configByPath"
+panorama_base = build_panorama_base_url(panorama_region)
+panorama_url = f"{panorama_base}/api/config/v9.2/configByPath"
 
 pano_headers = {
     'x-auth-jwt': token,

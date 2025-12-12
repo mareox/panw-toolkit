@@ -77,13 +77,17 @@ The project interacts with **two separate Palo Alto Networks APIs**:
    - Used by: `src/dns_config.py` (all update operations)
 
 2. **Panorama Cloud API** - Secondary API (read-only)
-   - Base URL: `https://{panorama_region}.prod.panorama.paloaltonetworks.com`
-   - Region configured in: `config/config.yaml` (panorama_region field)
+   - Base URL: Dynamically constructed based on `panorama_region` in `config/config.yaml`
+   - Region format (smart detection via `src/panorama_utils.py`):
+     * **Short identifier** (standard regions): `"paas-5"` → `https://paas-5.prod.panorama.paloaltonetworks.com`
+     * **Full domain** (China/special regions): `"paas-1.prod.sg.panorama.paloaltonetworks.com"` → `https://paas-1.prod.sg.panorama.paloaltonetworks.com`
    - Auth: **Non-standard** `x-auth-jwt: <token>` header (NOT `Authorization: Bearer`)
    - Purpose: View/validate GlobalProtect Portal configuration
-   - Used by: `test_panorama_api.py`
+   - Used by: Test scripts (`test_panorama_api.py`, `check_dns_endpoint.py`, etc.)
 
-**CRITICAL:** Panorama Cloud API requires the custom `x-auth-jwt` header, not the standard Bearer token format.
+**CRITICAL:**
+- Panorama Cloud API requires the custom `x-auth-jwt` header, not the standard Bearer token format
+- China regions use different domain structure (`.sg.` subdomain) - use full domain format in config
 
 ### Authentication Flow
 
@@ -167,6 +171,7 @@ Each region has:
 - **`src/dns_config.py`**: Core DNS operations, API calls, region mapping, configuration updates
 - **`src/csv_handler.py`**: CSV parsing, domain validation
 - **`src/validator.py`**: Configuration validation
+- **`src/panorama_utils.py`**: Panorama Cloud API URL construction with smart region detection (supports both short identifiers and full domains)
 - **Helper scripts** (`list_dns_config.py`, `get_token.py`, etc.): Diagnostics and testing
 
 ### Configuration Files

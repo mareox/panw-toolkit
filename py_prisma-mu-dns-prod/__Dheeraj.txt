@@ -1,0 +1,184 @@
+## Dheeraj - Quick Reference Guide
+
+=================================================================================
+CHINA ENVIRONMENT SETUP
+=================================================================================
+
+Current Configuration (China MU):
+  - TSG ID: 1957144987
+  - Client ID: scm-config-clone@1957144987.iam.panserviceaccount.com
+  - Panorama Region: paas-1.prod.sg.panorama.paloaltonetworks.com
+  - Portal: cmicbs.gp.prismaaccess.cn
+
+Key Differences from RoW:
+  ❗ China uses different Panorama domain: .sg.panorama.paloaltonetworks.com
+  ❗ Full domain format required in config (not short identifier)
+  ❗ China may have different region structure (check with --list-regions)
+
+Switching Between Environments:
+  Edit config/config.yaml and update:
+    - client_id
+    - client_secret
+    - tsg_id
+    - panorama_region (use full domain for China)
+
+=================================================================================
+BASIC COMMANDS
+=================================================================================
+
+  Step 0: Activate Virtual Environment
+	Windows: .\mudns\Scripts\activate.bat
+	Linux/Mac: source mudns/bin/activate
+
+  List Available Regions:
+	python3 main.py --list-regions
+
+  Step 1: Dry Run First (Preview Changes)
+
+  Using technical names:
+  cd "/mnt/u/Users/MareoX/Documents/PANW/04 - PS/Cummins/01. Projects/Script to update MU DNS/python-script-prod"
+  ./mudns/bin/python3 main.py --dry-run --regions ip-pool-group-1,ip-pool-group-31,ip-pool-group-2
+
+  Or using friendly names:
+  ./mudns/bin/python3 main.py --dry-run --regions US-Eastern,US-Central,Canada
+
+  This will show you what changes will be made without actually applying them.
+
+  ---
+  Step 2: Apply Changes (After Reviewing Dry Run)
+
+  Once you've reviewed and confirmed the dry run looks good:
+
+  Using technical names:
+  ./mudns/bin/python3 main.py --regions ip-pool-group-1,ip-pool-group-31,ip-pool-group-2
+
+  Or using friendly names:
+  ./mudns/bin/python3 main.py --regions US-Eastern,US-Central,Canada
+
+  ---
+  Additional Options:
+
+  With verbose logging:
+
+  ./mudns/bin/python3 main.py --regions ip-pool-group-1,ip-pool-group-31,ip-pool-group-2 --verbose
+
+  With custom rule name:
+
+  ./mudns/bin/python3 main.py --regions ip-pool-group-1,ip-pool-group-31,ip-pool-group-2 --rule-name "MyCustomDNS"
+
+  With different domains CSV file:
+
+  ./mudns/bin/python3 main.py --regions ip-pool-group-1,ip-pool-group-31,ip-pool-group-2 --domains /path/to/domains.csv
+
+  ---
+  Full Command Reference:
+
+  # Full command with all common options
+  ./mudns/bin/python3 main.py \
+    --regions ip-pool-group-1,ip-pool-group-31,ip-pool-group-2 \
+    --domains config/domains.csv \
+    --rule-name CustomDNS \
+    --verbose
+
+  ---
+  Important Notes:
+  - ⚠️ Always run with --dry-run first to preview changes
+  - ✅ The script will update ONLY the regions you specified
+  - ✅ All other regions will remain unchanged
+  - ✅ A backup will be automatically created in backup/ directory
+  - ✅ You can use either technical names (ip-pool-group-X) or friendly names (US-Eastern)
+
+=================================================================================
+CHINA-SPECIFIC EXAMPLES
+=================================================================================
+
+Test Connection (China MU):
+  python3 get_token.py
+  Expected: ✓ Token obtained successfully
+
+List China Regions:
+  python3 main.py --list-regions
+  Expected output: worldwide, and possibly region-specific pools
+
+Dry Run for China:
+  python3 main.py --dry-run -v
+  Expected: Shows regions available in China deployment
+
+View Current DNS Config (China):
+  python3 list_dns_config.py
+
+Update China Domains CSV:
+  Edit config/domains.csv:
+    domain
+    *.api.ml.azure.cn
+    *.chinacloudapi.cn
+    *.azure.cn
+
+Apply to China (All Regions):
+  python3 main.py --dry-run -v
+  python3 main.py -v
+
+Apply to China (Specific Region):
+  python3 main.py --dry-run --regions worldwide
+  python3 main.py --regions worldwide
+
+=================================================================================
+PANORAMA REGION CONFIGURATION
+=================================================================================
+
+Standard Regions (RoW):
+  panorama_region: "paas-5"
+  → Constructs: https://paas-5.prod.panorama.paloaltonetworks.com
+
+China Region (Special):
+  panorama_region: "paas-1.prod.sg.panorama.paloaltonetworks.com"
+  → Uses as-is: https://paas-1.prod.sg.panorama.paloaltonetworks.com
+
+Smart Detection:
+  ✅ Script automatically detects format (dot vs no dot)
+  ✅ No code changes needed when switching environments
+  ✅ Just update config/config.yaml with correct values
+
+=================================================================================
+TROUBLESHOOTING CHINA ENVIRONMENT
+=================================================================================
+
+Issue: Authentication fails
+Solution:
+  1. Verify client_id, client_secret, tsg_id in config/config.yaml
+  2. Run: python3 get_token.py
+  3. Check service account permissions in SCM
+
+Issue: No regions found
+Solution:
+  1. Run: python3 main.py --list-regions
+  2. Check China deployment region structure
+  3. Verify SCM API access
+
+Issue: Panorama API tests fail
+Solution:
+  1. Verify panorama_region uses full domain for China
+  2. Format: "paas-1.prod.sg.panorama.paloaltonetworks.com"
+  3. Do NOT use short identifier like "paas-1" for China
+
+Issue: "PROFILE_INVALID_TSG_ID" warning
+Solution:
+  ✅ This is NORMAL for Prisma Access-only (no SD-WAN)
+  ✅ Script continues and works correctly
+  ✅ Ignore this warning - authentication succeeded
+
+=================================================================================
+COMMIT CHANGES IN SCM (CRITICAL!)
+=================================================================================
+
+After running the script successfully:
+
+  1. Open SCM: https://stratacloudmanager.paloaltonetworks.com/
+  2. Look for "Pending Changes" notification
+  3. Click "Commit" or "Push Config"
+  4. Add commit message: "Updated DNS rules for China domains"
+  5. Wait for commit to complete
+
+Changes are STAGED until committed manually!
+
+=================================================================================

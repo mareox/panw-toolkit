@@ -9,6 +9,7 @@ import json
 import yaml
 import requests
 from urllib.parse import quote
+from src.panorama_utils import build_panorama_base_url
 
 GREEN = '\033[92m'
 RED = '\033[91m'
@@ -61,8 +62,9 @@ headers_panorama = {
 # Start with Panorama-style headers
 headers = headers_panorama
 
-# Base URL using panorama region from config
-base_url = f"https://{panorama_region}.prod.panorama.paloaltonetworks.com/api/config/v9.2/configByPath"
+# Base URL using panorama region from config (supports both short identifier and full domain)
+panorama_base = build_panorama_base_url(panorama_region)
+base_url = f"{panorama_base}/api/config/v9.2/configByPath"
 
 # Test different prefix paths for DNS configuration
 prefixes = [
